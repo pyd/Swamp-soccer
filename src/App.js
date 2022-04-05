@@ -1,11 +1,11 @@
-
+import PlayerCard from "./PlayerCard.js";
 
 function App() {
-    return (
-      <div>
+  return (
+    <>
+      <PlayerCard />
+    </>
+  );
+}
 
-      </div>
-    )
-  }
-
-  export default App;
+export default App;
