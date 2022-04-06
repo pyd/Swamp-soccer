@@ -1,9 +1,9 @@
-import PlayerCard from "./PlayerCard.js";
+import Home from "../src/pages/home.jsx";
 
 function App() {
   return (
     <>
-      <PlayerCard />
+      <Home />
     </>
   );
 }
