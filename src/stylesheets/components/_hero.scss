@@ -1,5 +1,6 @@
 .hero{
     text-align: center;
+    color : $text-color;
 }
 
 .bg{
@@ -20,11 +21,11 @@
 
 .hero__title{
     font-family: $text-font-stack;
-    color : $text-color;
     justify-content: center;
     text-transform: uppercase;
     font-size: 6rem;
     font-weight: 500;
+    // color : $text-secondary-color;
 }
 
 .hero__btns{
@@ -37,10 +38,9 @@
         padding : 1rem;
         padding-right: 3rem;
         padding-left: 3rem;
-        color : $text-color;
         font-weight: 600;
         font-size: .9rem;
-        box-shadow: $box-shadow;
+        // box-shadow: $box-shadow;
     }
 
     .color2{
