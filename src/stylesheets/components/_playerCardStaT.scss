@@ -16,7 +16,7 @@
     &:nth-last-of-type(1) {
       justify-self: center;
       grid-column: 1 / 3;
-      width: calc($card-front-stat-width * 1.4);
+      width: calc($card-front-stat-width * 0.8);
     }
   }
 

@@ -1,9 +1,9 @@
 function PlayerCardStat(props) {
   return (
     <li>
-      <div>{props.action}</div>
+      <div>{props.actionName}</div>
       <div>:</div>
-      <div className="card__front-stats-num">{props.num}</div>
+      <div className="card__front-stats-num">{props.actionValue}</div>
     </li>
   )
 }

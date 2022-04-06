@@ -10,27 +10,36 @@ function PlayerCard(props) {
         <article className="card__front-text">
           <h2 className="card__front-position">Goalkeeper</h2>
           <ul className="card__front-stats">
-            <PlayerCardStat action="Saved" num="5" />
-            <PlayerCardStat action="Dribble" num="5" />
-            <PlayerCardStat action="Tackle" num="5" />
-            <PlayerCardStat action="Assist" num="5" />
-            <PlayerCardStat action="goal" num="5" />
+            <PlayerCardStat actionName="Saved" actionValue="5" />
+            <PlayerCardStat actionName="Dribble" actionValue="5" />
+            <PlayerCardStat actionName="Tackle" actionValue="5" />
+            <PlayerCardStat actionName="Assist" actionValue="5" />
+            <PlayerCardStat actionName="Goal" actionValue="5" />
           </ul>
         </article>
       </article>
 
       <article className="card__back">
-        <h2 className="card__back-name">Roger</h2>
-        <h3 className="card__back-lastname">Cadri</h3>
-        <ul className="card__back-infolist">
-          <li>President</li>
-          <li>45</li>
-          <li>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt adipisci eaque soluta tempore numquam
-            velit.
-          </li>
-          <li></li>
-        </ul>
+        <div className="card__back-name">
+          <h3>Roger</h3>
+          <h2>Cadri</h2>
+        </div>
+
+        <div className="card__back-infolist">
+          <ul className="card__back-infolist-flex">
+            <li>President</li>
+            <li>45</li>
+            <li>
+              <div>Member since</div>
+              <div>:</div>
+              <div>5</div>
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt adipisci eaque soluta tempore numquam
+              velit.
+            </li>
+          </ul>
+        </div>
       </article>
     </section>
   );
