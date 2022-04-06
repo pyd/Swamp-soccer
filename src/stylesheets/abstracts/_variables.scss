@@ -53,25 +53,31 @@ $base-url: '/assets/' !default;
 
 // ============ ============ ============ ============ ============ ============ ============ ============
 
-
-
 /// Color project
-$first-color : #00C8FF;
-$secondary-color : #2A0057;
+// Blue versions
+// $first-color : #00C8FF;
+// $secondary-color : #2A0057;
+
+$first-color : #ffd900;
+$secondary-color : #06000c;
 
 $text-color: rgb(255, 255, 255);
 $text-secondary-color: rgb(0, 0, 0);
 
 
-/// Gradient color project
+/// Gradient color bg
 $first-gradient-color : #1F0858;
 $secondary-gradient-color : #4B38A1;
 $third-gradient-color : #946CC4;
 
-$box-shadow : 10px 6px 17px -11px #000000;
+
+/// Hero
+$hero-title-color : #ffffff;
+// $hero-title-font 
+$hero-btn-text-color : #ffffff;
 
 
-/// Nos chiffres clés
+/// Stats
 $text-label-color : black;
 $text-number-color : rgb(0, 0, 0);
 $text-stat-color : rgba(0, 0, 0, 0.63);
