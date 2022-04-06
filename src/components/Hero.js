@@ -2,7 +2,7 @@
 import React from "react";
 
 
-// == Page
+// == Component
 const Hero = () => {
     return (
         <div class="hero bg">

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;500;700;900&display=swap');
+
+.home {
+  position : relative;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header{
+     background-color: #000000;
+     background-image: 
+                       linear-gradient(rgba(51, 5, 82, 0.6),
+                         rgba(17, 1, 54, 0.6)),
+                         url(https://www.topendsports.com/sport/unusual/images/mud-running.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 1em;
+    text-align: center;
+
+//     background: rgb(2,0,36);
+ background: linear-gradient(4deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(184, 128, 196) 100%);
+}
+
+.home__title{
+    text-transform: uppercase;
+    font-size: 6rem;
+    font-weight: 500;
+}
+
+.home__btns{
+    display : flex;
+    justify-content: center;
+
+    p {
+        background: #00C8FF;
+        padding : 1rem;
+        padding-right: 3rem;
+        padding-left: 3rem;
+        color: #ffffff;
+        font-weight: 600;
+        box-shadow: 10px 6px 17px -11px #000000;
+    }
+
+    .color2{
+        background-color: #2A0057;
+    }
+}
+
+
+.home__info--bonus{
+    display : flex;
+    justify-content: center;
+   
+
+    .container{
+        border: .3rem solid #00C8FF;
+        display : flex;
+    }
+
+    span{
+        margin : 1rem;
+        font-size: 4rem;
+        font-weight: 600;
+    }
+}
+
+// == PARTNERSHIP
+
+.home__partnership{
+    background : #00C8FF; 
+}

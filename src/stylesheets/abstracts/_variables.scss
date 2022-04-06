@@ -10,7 +10,7 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 
 /// Copy text color
 /// @type Color
-$text-color: rgb(255, 255, 255) !default;
+// $text-color: rgb(255, 255, 255) !default;
 
 /// Main brand color
 /// @type Color
@@ -58,6 +58,9 @@ $base-url: '/assets/' !default;
 /// Color project
 $first-color : #00C8FF;
 $secondary-color : #2A0057;
+
+$text-color: rgb(255, 255, 255);
+$text-secondary-color: rgb(0, 0, 0);
 
 
 /// Gradient color project
