@@ -1,19 +1,20 @@
+import {PlayerCardStat} from "./PlayerCardStat";
+
 function PlayerCard(props) {
   return (
     <section className="card-container">
-
       <article className="card__front">
         <figure>
           <img className="general__img" src="./img/profilpicture.jpg" alt="" />
         </figure>
-        <article className="card__front-stats">
+        <article className="card__front-text">
           <h2 className="card__front-position">Goalkeeper</h2>
-          <ul>
-            <li>shootSaved</li>
-            <li>dribbling</li>
-            <li>tackling</li>
-            <li>assist</li>
-            <li>goal</li>
+          <ul className="card__front-stats">
+            <PlayerCardStat action="Saved" num="5" />
+            <PlayerCardStat action="Dribble" num="5" />
+            <PlayerCardStat action="Tackle" num="5" />
+            <PlayerCardStat action="Assist" num="5" />
+            <PlayerCardStat action="goal" num="5" />
           </ul>
         </article>
       </article>
