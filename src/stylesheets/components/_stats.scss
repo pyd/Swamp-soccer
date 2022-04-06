@@ -1,0 +1,48 @@
+.stat-container {
+    margin: 0 auto;
+    padding: 1rem 5rem 0 5rem;
+}
+
+.stats {
+    text-transform: uppercase;
+    color: $text-secondary-color;
+    display: table;
+    margin: 0 auto;
+
+    .container {
+        border: .3rem solid $first-color;
+        display: flex;
+        border: .3rem solid $first-color;
+        border-bottom: none;
+        position: relative;
+    }
+
+    .label {
+        position: absolute;
+        top: -.7rem;
+        right: 50%;
+        height: 20%;
+        width: 10rem;
+        font-size: .9rem;
+        text-align: center;
+        color: $text-label-color;
+        background-color: $bg-label;
+    }
+
+    .bonus {
+        text-align: center;
+        margin: 1rem;
+
+        span {
+            color: $text-number-color;
+            margin: 1rem;
+            font-size: 4rem;
+            font-weight: 600;
+        }
+
+        p {
+            color: $text-stat-color;
+            margin-top: -1rem;
+        }
+    }
+}
