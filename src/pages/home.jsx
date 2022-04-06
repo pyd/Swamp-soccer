@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import Presentation from "../components/Presentation";
 import Transition from "../components/Transition";
+import Partnership from "../components/Partnership";
 
 
 
@@ -12,6 +13,8 @@ const Home = () => {
             <Hero />
             <Transition />
             <Presentation />
+            <Transition />
+            <Partnership />
         </div>
     )
 };

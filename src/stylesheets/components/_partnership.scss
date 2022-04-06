@@ -1,0 +1,15 @@
+.partnership{
+    font-size: 1rem;
+    text-align: justify;
+    padding: 0 5rem 0 5rem;
+    color : $text-color;
+    background: $first-color;
+    padding: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    .content{
+        display : flex;
+        margin: 1rem;
+    }
+}
