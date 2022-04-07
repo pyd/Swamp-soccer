@@ -1,0 +1,274 @@
+$playercard-font-size: 0.8rem;
+$playercard-font-size-stats: 1rem;
+
+$playercard-color-font: white;
+
+$playercard-color-back-background: rgb(44, 50, 66);
+
+$playercard-container-width: 18rem;
+$playercard-aspect-ratio: 1 / 1.4;
+$playercard-text-translateZ: 10px;
+
+$playercard-transform-time: 0.5s;
+
+$playercard-general-box-shadow: 12px 12px 30px rgba(128, 128, 128, 0.519);
+$playercard-box-shadow-sticker-back: 12px 12px 30px rgba(0, 0, 0, 0.519);
+
+$playercard-back-margin-general: 3.2rem;
+
+$playercard-back-line-height: 5rem;
+$playercard-back-line-bottom-pos: -17px;
+$playercard-back-line-right-pos: 1.8rem;
+
+
+// TEMP PARAMETER
+.card-container {
+  position: absolute;
+  // margin: 10rem;
+  color: $playercard-color-font;
+}
+
+// -------------------------------------------
+.card-container {
+  position: relative;
+  width: $playercard-container-width;
+  aspect-ratio: $playercard-aspect-ratio;
+
+  transform-style: preserve-3d;
+  perspective: 1000px;
+
+  font-size: $playercard-font-size;
+
+  // ----------------  ----------------  ----------------  ----------------  ----------------  ----------------
+  &:hover {
+    .card__front {
+      transform: rotateY(-180deg) rotateZ(15deg);
+    }
+    .card__back {
+      transform: rotateY(0deg);
+    }
+  }
+}
+
+// -------------------------------------------
+// CARD FRONT
+// -------------------------------------------
+.card__front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  // ----------------  ----------------  ----------------  ----------------  ----------------  ----------------
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  transition: transform $playercard-transform-time;
+
+  transform-style: preserve-3d;
+
+  box-shadow: $playercard-general-box-shadow;
+
+  display: grid;
+  //________
+  > * {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  //________
+  figure {
+    img {
+      aspect-ratio: $playercard-aspect-ratio;
+    }
+  }
+  //________
+  .card__front-text {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    transform: translateZ($playercard-text-translateZ);
+    backface-visibility: hidden;
+  }
+}
+
+// -------------------------------------------
+// CARD BACK
+// -------------------------------------------
+.card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  box-shadow: $playercard-general-box-shadow;
+
+  // ----------------  ----------------  ----------------  ----------------  ----------------  ----------------
+  backface-visibility: hidden;
+  // transform: rotateY(0deg);
+  transform: rotateY(180deg) rotateZ(-15deg);
+  transition: transform $playercard-transform-time;
+
+  transform-style: preserve-3d;
+
+  //________
+  .card__back-infolist {
+    position: absolute;
+    transform: translateZ($playercard-text-translateZ);
+    backface-visibility: hidden;
+  }
+}
+
+// -------------------------------------------
+// STICKER
+// -------------------------------------------
+$playercard-sticker-pos: -5%;
+$playercard-sticker-size: 3rem;
+$playercard-sticker-color: rgb(23, 35, 142);
+
+.card__front::after {
+  content: "";
+  position: absolute;
+  background-color: $playercard-sticker-color;
+  width: $playercard-sticker-size;
+  height: $playercard-sticker-size;
+  top: $playercard-sticker-pos;
+  right: $playercard-sticker-pos;
+
+  box-shadow: $playercard-general-box-shadow;
+}
+
+.card__back::before {
+  content: "";
+  position: absolute;
+  background-color: $playercard-sticker-color;
+  width: $playercard-sticker-size;
+  height: $playercard-sticker-size;
+  top: $playercard-sticker-pos;
+  left: $playercard-sticker-pos;
+
+  box-shadow: $playercard-box-shadow-sticker-back;
+}
+
+// ============  ============  ============  ============  ============  ============  ============
+// ============  ============  ============  ============  ============  ============  ============
+// ============  ============  ============  ============  ============  ============  ============
+
+// ============  ============  ============
+// CARD FRONT
+// ============  ============  ============
+.card__front-text {
+  display: grid;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+
+  h2 {
+    position: absolute;
+    top: -50%;
+    left: 20%;
+    transform: rotateZ(-90deg);
+    transform-origin: left;
+
+    font-size: calc($playercard-font-size * 2);
+    text-transform: uppercase;
+    text-shadow: 3px 3px 10px rgb(25, 25, 25);
+  }
+
+  .card__front-stats {
+    @include grid-column(repeat(2, 8rem), 0.5rem, 0.5rem);
+    font-size: $playercard-font-size-stats;
+    font-weight: bold;
+  }
+}
+
+// ============  ============  ============
+// CARD BACK
+// ============  ============  ============
+.card__back {
+  background-color: $playercard-color-back-background;
+
+  .card__back-name {
+    margin-inline-start: $playercard-back-margin-general;
+    margin-block-start: 1.5rem;
+    h3 {
+      font-size: calc($playercard-font-size * 2.3);
+    }
+    h2 {
+      font-size: calc($playercard-font-size * 3);
+      position: relative;
+
+      // top left corner lines
+      &:after {
+        position: absolute;
+        content: "";
+        width: 20%;
+        height: 0.2rem;
+        background-color: white;
+        bottom: 0;
+        left: -20px;
+      }
+      &:before {
+        position: absolute;
+        content: "";
+        width: 0.2rem;
+        height: $playercard-back-line-height;
+        background-color: white;
+        bottom: -5rem;
+        left: -20px;
+      }
+    }
+  }
+
+  .card__back-infolist {
+    margin-block-start: calc($playercard-back-margin-general / 3);
+
+    .card__back-infolist-flex {
+      max-width: 80%;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      // all li
+      li {
+        margin-inline-start: 1.2rem;
+      }
+
+      li:nth-of-type(1) {
+        font-size: calc($playercard-font-size * 1.6);
+      }
+
+      li:nth-of-type(2) {
+        font-size: calc($playercard-font-size * 1.3);
+      }
+      li:nth-of-type(3) {
+        font-size: calc($playercard-font-size * 1.3);
+        margin-block-end: 0.5rem;
+        display: flex;
+        gap: 0.3rem;
+      }
+
+      li:nth-of-type(4) {
+        font-size: calc($playercard-font-size * 1.2);
+        margin-inline-end: 1.2rem;
+
+        // bottom right corner lines
+        &:after {
+          position: absolute;
+          content: "";
+          width: 20%;
+          height: 0.2rem;
+          background-color: $playercard-color-font;
+          bottom: $playercard-back-line-bottom-pos;
+          right: $playercard-back-line-right-pos;
+        }
+        &:before {
+          position: absolute;
+          content: "";
+          width: 0.2rem;
+          height: $playercard-back-line-height;
+          background-color: $playercard-color-font;
+          bottom: -1rem;
+          right: $playercard-back-line-right-pos;
+        }
+      }
+    }
+  }
+}
