@@ -6,6 +6,7 @@ const Stats = () => {
         <div className="stat-container">
             <div className="stats">
                 <div className="container">
+
                     <h2 className="label">Nos chiffres clés</h2>
 
                     <div className="bonus">
@@ -19,11 +20,6 @@ const Stats = () => {
                     </div>
 
                     <div className="bonus">
-                        <span></span>
-                        <p>logo</p>
-                    </div>
-
-                    <div className="bonus">
                         <span>58</span>
                         <p>bains de boues</p>
                     </div>
@@ -33,8 +29,8 @@ const Stats = () => {
                         <p>poteries offertes</p>
                     </div>
                 </div>
-
             </div>
+
         </div>
 
     )

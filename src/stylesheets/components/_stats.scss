@@ -11,10 +11,36 @@
     .container {
         border: .3rem solid $first-color;
         display: flex;
-        border: .3rem solid $first-color;
         border-bottom: none;
         position: relative;
+         z-index:  -1;
+
+        ::before {
+            content: "";
+            position: absolute;
+            background-color: $first-color;
+            width: 5%;
+            height: 3%;
+            // top: 50%;
+            top: 98%;
+            left: 98%;
+            z-index: -1;
+          }        
+
+
+        ::after {
+            content: "";
+            position: absolute;
+            background-color: $first-color;
+            width: 5%;
+            height: 3%;
+            // top: 50%;
+            top: 98%;
+            right: 98%;
+            z-index: -1;
+          }
     }
+
 
     .label {
         position: absolute;
