@@ -1,4 +1,4 @@
-import {PlayerCardStat} from "./PlayerCardStat";
+import {PlayerCardStat} from "./MemberCardStat";
 
 function PlayerCard(props) {
   return (

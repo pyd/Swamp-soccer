@@ -1,4 +1,4 @@
-import {PlayerCard} from "./../components/PlayerCard.js";
+import {PlayerCard} from "../components/MemberCard.js";
 import {membersData} from "./../components/DataMembers.js";
 
 function Members() {
@@ -6,6 +6,7 @@ function Members() {
     return <PlayerCard key={cardparam.id} cardparam={cardparam} />;
   });
 
+  // -------------------------------------------------------------
   const goalkeeperArray = membersData.filter(function (position) {
     return position.position == "Goalkeeper";
   });
@@ -13,16 +14,21 @@ function Members() {
     return <PlayerCard key={cardparam.id} cardparam={cardparam} />;
   });
 
+  // -------------------------------------------------------------
   const attackArray = membersData.filter(function (position) {
-    return position.position.includes("fullStack") || 
-    position.position.includes("Winger");
+    return position.position.includes("Central") || position.position.includes("Winger");
   });
-  
-  const defenseArray = membersData.filter(function (position) {
-    return position.position.includes("back") || 
-    position.position.includes("defensive");
+  const attackArrayList = attackArray.map((cardparam) => {
+    return <PlayerCard key={cardparam.id} cardparam={cardparam} />;
   });
 
+  // -------------------------------------------------------------
+  const defenseArray = membersData.filter(function (position) {
+    return position.position.includes("Back") || position.position.includes("Defensive");
+  });
+  const defenseArrayList = defenseArray.map((cardparam) => {
+    return <PlayerCard key={cardparam.id} cardparam={cardparam} />;
+  });
 
   return (
     <>
@@ -32,11 +38,11 @@ function Members() {
       </section>
       <section className="member-card-container-attack">
         <h2>Attack</h2>
-        {addMemberCard}
+        {attackArrayList}
       </section>
       <section className="member-card-container-defense">
         <h2>Defense</h2>
-        {addMemberCard}
+        {defenseArrayList}
       </section>
     </>
   );

@@ -4,9 +4,9 @@ import {Members} from "./pages/Members.js";
 
 import {NavBar} from "./components/NavBar.js";
 
-import {Home} from "./Home.js";
-import {Blog} from "./Blog.js";
-import {Contact} from "./Contact.js";
+import {Home} from "./pages/Home.js";
+import {Blog} from "./pages/Blog.js";
+import {Contact} from "./pages/Contact.js";
 
 function App() {
   return (
