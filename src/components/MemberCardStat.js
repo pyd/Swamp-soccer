@@ -1,4 +1,4 @@
-function PlayerCardStat(props) {
+function MemberCardStat(props) {
   return (
     <li>
       <div>{props.actionName}</div>
@@ -8,4 +8,4 @@ function PlayerCardStat(props) {
   )
 }
 
-export {PlayerCardStat};
+export {MemberCardStat};

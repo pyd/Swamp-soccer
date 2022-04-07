@@ -1,3 +1,7 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
 /// Regular font family
 /// @type List
 $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
@@ -5,6 +9,7 @@ $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvet
 /// Code (monospace) font family
 /// @type List
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
 
 /// Copy text color
 /// @type Color
@@ -31,7 +36,6 @@ $dark-grey: rgb(68, 68, 68) !default;
 /// @type Length
 $max-width: 1180px !default;
 
-
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
@@ -40,7 +44,6 @@ $breakpoints: (
   'medium': 768px,
   'large': 1024px,
 ) !default;
-
 
 /// Relative or absolute URL where all assets are served from
 /// @type String
@@ -51,3 +54,32 @@ $base-url: '/assets/' !default;
 
 // ============ ============ ============ ============ ============ ============ ============ ============
 
+/// Color project
+// Blue versions
+// $first-color : #00C8FF;
+// $secondary-color : #2A0057;
+
+$first-color : #ffd900;
+$secondary-color : #06000c;
+
+$text-color-home: rgb(255, 255, 255);
+$text-secondary-color: rgb(0, 0, 0);
+
+
+/// Gradient color bg
+$first-gradient-color : #1F0858;
+$secondary-gradient-color : #4B38A1;
+$third-gradient-color : #946CC4;
+
+
+/// Hero
+$hero-title-color : #ffffff;
+// $hero-title-font 
+$hero-btn-text-color : #ffffff;
+
+
+/// Stats
+$text-label-color : black;
+$text-number-color : rgb(0, 0, 0);
+$text-stat-color : rgba(0, 0, 0, 0.63);
+$bg-label : white;

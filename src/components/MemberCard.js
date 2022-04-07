@@ -1,6 +1,6 @@
-import {PlayerCardStat} from "./MemberCardStat";
+import {MemberCardStat} from "./MemberCardStat";
 
-function PlayerCard(props) {
+function MemberCard(props) {
   return (
     <section className="card-container">
       <article className="card__front">
@@ -10,11 +10,11 @@ function PlayerCard(props) {
         <article className="card__front-text">
           <h2 className="card__front-position">{props.cardparam.position}</h2>
           <ul className="card__front-stats">
-            <PlayerCardStat actionName="Saved" actionValue={props.cardparam.shootSaved} />
-            <PlayerCardStat actionName="Dribble" actionValue={props.cardparam.dribbling} />
-            <PlayerCardStat actionName="Tackle" actionValue={props.cardparam.tackling} />
-            <PlayerCardStat actionName="Assist" actionValue={props.cardparam.assist} />
-            <PlayerCardStat actionName="Goal" actionValue={props.cardparam.goal} />
+            <MemberCardStat actionName="Saved" actionValue={props.cardparam.shootSaved} />
+            <MemberCardStat actionName="Dribble" actionValue={props.cardparam.dribbling} />
+            <MemberCardStat actionName="Tackle" actionValue={props.cardparam.tackling} />
+            <MemberCardStat actionName="Assist" actionValue={props.cardparam.assist} />
+            <MemberCardStat actionName="Goal" actionValue={props.cardparam.goal} />
           </ul>
         </article>
       </article>
@@ -44,4 +44,4 @@ function PlayerCard(props) {
   );
 }
 
-export {PlayerCard};
+export {MemberCard};

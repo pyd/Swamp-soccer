@@ -1,0 +1,26 @@
+.presentation{
+    // background: $first-color;
+    font-size: 1rem;
+    text-align: justify;
+    padding: 0 5rem 0 5rem;
+    color : $text-secondary-color;
+    display: table;
+    margin: 0 auto;
+    width: 50rem;
+
+
+    h2{
+        padding: 1rem 0 0 0;
+        text-align: center;
+    }
+
+    p{
+        padding: .5rem;
+    }
+
+    span{
+        color: $secondary-color;
+        font-weight: bolder;
+        font-style: italic;
+    }
+}
