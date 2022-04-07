@@ -1,0 +1,13 @@
+.transition{
+    display : flex;
+    justify-content: center;
+    flex-direction: column;
+    margin : 3rem;
+}
+
+.barre1{
+    background : $first-color;
+    width : 50%;
+    height : .3rem;
+    margin: 0 auto;
+}

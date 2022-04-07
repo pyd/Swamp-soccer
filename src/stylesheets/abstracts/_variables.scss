@@ -8,7 +8,7 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 
 /// Copy text color
 /// @type Color
-$text-color: rgb(34, 34, 34) !default;
+// $text-color: rgb(255, 255, 255) !default;
 
 /// Main brand color
 /// @type Color
@@ -51,3 +51,32 @@ $base-url: '/assets/' !default;
 
 // ============ ============ ============ ============ ============ ============ ============ ============
 
+/// Color project
+// Blue versions
+// $first-color : #00C8FF;
+// $secondary-color : #2A0057;
+
+$first-color : #ffd900;
+$secondary-color : #06000c;
+
+$text-color: rgb(255, 255, 255);
+$text-secondary-color: rgb(0, 0, 0);
+
+
+/// Gradient color bg
+$first-gradient-color : #1F0858;
+$secondary-gradient-color : #4B38A1;
+$third-gradient-color : #946CC4;
+
+
+/// Hero
+$hero-title-color : #ffffff;
+// $hero-title-font 
+$hero-btn-text-color : #ffffff;
+
+
+/// Stats
+$text-label-color : black;
+$text-number-color : rgb(0, 0, 0);
+$text-stat-color : rgba(0, 0, 0, 0.63);
+$bg-label : white;
