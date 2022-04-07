@@ -21,12 +21,12 @@
 
 //  export default App;
 
-import Home from "./pages/Home.jsx";
+//import Home from "./pages/Home.js";
 import {Members} from "./pages/Members.js";
 
  function App() {
    return (
-    <Home />
+    <Members />
    );
  }
 
