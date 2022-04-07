@@ -1,28 +1,30 @@
-$font-size: 0.8rem;
-$font-size-stats: 1rem;
+$playercard-font-size: 0.8rem;
+$playercard-font-size-stats: 1rem;
 
-$card-aspect-ratio: 1 / 1.4;
-$card-text-translateZ: 10px;
+$playercard-color-font: white;
 
-$card-container-width: 18rem;
-$card-front-stat-width: 100%;
+$playercard-color-back-background: rgb(44, 50, 66);
 
-$card-sticker-size: 3rem;
-$card-sticker-pos: -5%;
-$card-sticker-color: rgb(23, 35, 142);
+$playercard-container-width: 18rem;
+$playercard-aspect-ratio: 1 / 1.4;
+$playercard-text-translateZ: 10px;
 
-$card-back-margin: 3.2rem;
+$playercard-transform-time: 0.5s;
 
-$card-back-line-height: 5rem;
+$playercard-general-box-shadow: 12px 12px 30px rgba(128, 128, 128, 0.519);
+$playercard-box-shadow-sticker-back: 12px 12px 30px rgba(0, 0, 0, 0.519);
 
-$card-back-line-bottom-pos: -17px;
-$card-back-line-right-pos: 1.8rem;
+$playercard-back-margin-general: 3.2rem;
+
+$playercard-back-line-height: 5rem;
+$playercard-back-line-bottom-pos: -17px;
+$playercard-back-line-right-pos: 1.8rem;
 
 // -------------------------------------------
 .card-container {
   position: relative;
-  width: $card-container-width;
-  aspect-ratio: $card-aspect-ratio;
+  width: $playercard-container-width;
+  aspect-ratio: $playercard-aspect-ratio;
 
   transform-style: preserve-3d;
   perspective: 1000px;
@@ -39,6 +41,8 @@ $card-back-line-right-pos: 1.8rem;
 }
 
 // -------------------------------------------
+// CARD FRONT
+// -------------------------------------------
 .card__front {
   position: absolute;
   width: 100%;
@@ -47,11 +51,11 @@ $card-back-line-right-pos: 1.8rem;
   // ----------------  ----------------  ----------------  ----------------  ----------------  ----------------
   backface-visibility: hidden;
   transform: rotateY(0deg);
-  transition: all 0.5s;
+  transition: transform $playercard-transform-time;
 
   transform-style: preserve-3d;
 
-  box-shadow: 0 0 5px 5px rgba(128, 128, 128, 0.519);
+  box-shadow: $playercard-general-box-shadow;
 
   display: grid;
   //________
@@ -62,7 +66,7 @@ $card-back-line-right-pos: 1.8rem;
   //________
   figure {
     img {
-      aspect-ratio: $card-aspect-ratio;
+      aspect-ratio: $playercard-aspect-ratio;
     }
   }
   //________
@@ -70,65 +74,82 @@ $card-back-line-right-pos: 1.8rem;
     position: absolute;
     bottom: 5%;
     left: 0;
-    transform: translateZ($card-text-translateZ);
+    transform: translateZ($playercard-text-translateZ);
     backface-visibility: hidden;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    background-color: $card-sticker-color;
-    width: $card-sticker-size;
-    height: $card-sticker-size;
-    top: $card-sticker-pos;
-    right: $card-sticker-pos;
   }
 }
 
+// -------------------------------------------
+// CARD BACK
 // -------------------------------------------
 .card__back {
   position: absolute;
   width: 100%;
   height: 100%;
 
-  box-shadow: 0 0 5px 5px rgba(128, 128, 128, 0.519);
+  box-shadow: $playercard-general-box-shadow;
 
   // ----------------  ----------------  ----------------  ----------------  ----------------  ----------------
   backface-visibility: hidden;
   // transform: rotateY(0deg);
   transform: rotateY(180deg) rotateZ(-15deg);
-  transition: all 0.5s;
+  transition: transform $playercard-transform-time;
 
   transform-style: preserve-3d;
 
   //________
   .card__back-infolist {
     position: absolute;
-    transform: translateZ($card-text-translateZ);
+    transform: translateZ($playercard-text-translateZ);
     backface-visibility: hidden;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    background-color: $card-sticker-color;
-    width: $card-sticker-size;
-    height: $card-sticker-size;
-    top: $card-sticker-pos;
-    left: $card-sticker-pos;
   }
 }
 
+// -------------------------------------------
+// STICKER
+// -------------------------------------------
+
+$playercard-sticker-pos: -5%;
+$playercard-sticker-size: 3rem;
+$playercard-sticker-color: rgb(23, 35, 142);
+
+.card__front::after {
+  content: "";
+  position: absolute;
+  background-color: $playercard-sticker-color;
+  width: $playercard-sticker-size;
+  height: $playercard-sticker-size;
+  top: $playercard-sticker-pos;
+  right: $playercard-sticker-pos;
+
+  box-shadow: $playercard-general-box-shadow;
+}
+
+.card__back::before {
+  content: "";
+  position: absolute;
+  background-color: $playercard-sticker-color;
+  width: $playercard-sticker-size;
+  height: $playercard-sticker-size;
+  top: $playercard-sticker-pos;
+  left: $playercard-sticker-pos;
+
+  box-shadow: $playercard-box-shadow-sticker-back;
+}
+
+// ============  ============  ============  ============  ============  ============  ============
 // ============  ============  ============  ============  ============  ============  ============
 // ============  ============  ============  ============  ============  ============  ============
 
 .card-container {
   margin: 10rem;
-  font-size: $font-size;
+  font-size: $playercard-font-size;
   color: white;
 }
 
-//____ ____ ____ ____ ____ ____ ____
+// ============  ============  ============
+// CARD FRONT
+// ============  ============  ============
 .card__front-text {
   display: grid;
   justify-content: center;
@@ -136,53 +157,55 @@ $card-back-line-right-pos: 1.8rem;
   width: 100%;
 
   h2 {
-    font-size: calc($font-size * 2);
-    text-transform: uppercase;
-    transform: rotateZ(-90deg);
     position: absolute;
-    text-shadow: 3px 3px 10px rgb(25, 25, 25);
+    top: -20%;
+    left: 20%;
+    transform: rotateZ(-90deg);
+    transform-origin: left;
 
-    top: -90%;
-    left: -10%;
+    font-size: calc($playercard-font-size * 2);
+    text-transform: uppercase;
+    text-shadow: 3px 3px 10px rgb(25, 25, 25);
   }
 
   .card__front-stats {
     @include grid-column(repeat(2, 8rem), 0.5rem, 0.5rem);
-    font-size: $font-size-stats;
+    font-size: $playercard-font-size-stats;
     font-weight: bold;
   }
 }
 
-
-
-//____ ____ ____ ____ ____ ____ ____
+// ============  ============  ============
+// CARD BACK
+// ============  ============  ============
 .card__back {
-  background-color: rgb(44, 50, 66);
+  background-color: $playercard-color-back-background;
 
   .card__back-name {
-    margin-inline-start: $card-back-margin;
+    margin-inline-start: $playercard-back-margin-general;
     margin-block-start: 1.5rem;
     h3 {
-      font-size: calc($font-size * 2.3);
+      font-size: calc($playercard-font-size * 2.3);
     }
     h2 {
-      font-size: calc($font-size * 3);
-      position:relative;
+      font-size: calc($playercard-font-size * 3);
+      position: relative;
 
+      // top left corner lines
       &:after {
         position: absolute;
-        content:"";
+        content: "";
         width: 20%;
-        height: .2rem;
+        height: 0.2rem;
         background-color: white;
         bottom: 0;
         left: -20px;
       }
       &:before {
         position: absolute;
-        content:"";
-        width: .2rem;
-        height: $card-back-line-height;
+        content: "";
+        width: 0.2rem;
+        height: $playercard-back-line-height;
         background-color: white;
         bottom: -5rem;
         left: -20px;
@@ -191,7 +214,7 @@ $card-back-line-right-pos: 1.8rem;
   }
 
   .card__back-infolist {
-    margin-block-start: calc($card-back-margin / 3);
+    margin-block-start: calc($playercard-back-margin-general / 3);
 
     .card__back-infolist-flex {
       max-width: 80%;
@@ -206,40 +229,41 @@ $card-back-line-right-pos: 1.8rem;
       }
 
       li:nth-of-type(1) {
-        font-size: calc($font-size * 1.6);
+        font-size: calc($playercard-font-size * 1.6);
       }
 
       li:nth-of-type(2) {
-        font-size: calc($font-size * 1.3);
+        font-size: calc($playercard-font-size * 1.3);
       }
       li:nth-of-type(3) {
-        font-size: calc($font-size * 1.3);
+        font-size: calc($playercard-font-size * 1.3);
         margin-block-end: 0.5rem;
         display: flex;
         gap: 0.3rem;
       }
 
       li:nth-of-type(4) {
-        font-size: calc($font-size * 1.2);
+        font-size: calc($playercard-font-size * 1.2);
         margin-inline-end: 1.2rem;
 
+        // bottom right corner lines
         &:after {
           position: absolute;
-          content:"";
+          content: "";
           width: 20%;
-          height: .2rem;
-          background-color: white;
-          bottom: $card-back-line-bottom-pos ;
-          right: $card-back-line-right-pos;
+          height: 0.2rem;
+          background-color: $playercard-color-font;
+          bottom: $playercard-back-line-bottom-pos;
+          right: $playercard-back-line-right-pos;
         }
         &:before {
           position: absolute;
-          content:"";
-          width: .2rem;
-          height: $card-back-line-height;
-          background-color: white;
+          content: "";
+          width: 0.2rem;
+          height: $playercard-back-line-height;
+          background-color: $playercard-color-font;
           bottom: -1rem;
-          right: $card-back-line-right-pos;
+          right: $playercard-back-line-right-pos;
         }
       }
     }
