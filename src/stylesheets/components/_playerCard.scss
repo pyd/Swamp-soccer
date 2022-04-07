@@ -20,6 +20,14 @@ $playercard-back-line-height: 5rem;
 $playercard-back-line-bottom-pos: -17px;
 $playercard-back-line-right-pos: 1.8rem;
 
+
+// TEMP PARAMETER
+.card-container {
+  position: absolute;
+  // margin: 10rem;
+  color: $playercard-color-font;
+}
+
 // -------------------------------------------
 .card-container {
   position: relative;
@@ -28,6 +36,8 @@ $playercard-back-line-right-pos: 1.8rem;
 
   transform-style: preserve-3d;
   perspective: 1000px;
+
+  font-size: $playercard-font-size;
 
   // ----------------  ----------------  ----------------  ----------------  ----------------  ----------------
   &:hover {
@@ -108,7 +118,6 @@ $playercard-back-line-right-pos: 1.8rem;
 // -------------------------------------------
 // STICKER
 // -------------------------------------------
-
 $playercard-sticker-pos: -5%;
 $playercard-sticker-size: 3rem;
 $playercard-sticker-color: rgb(23, 35, 142);
@@ -141,12 +150,6 @@ $playercard-sticker-color: rgb(23, 35, 142);
 // ============  ============  ============  ============  ============  ============  ============
 // ============  ============  ============  ============  ============  ============  ============
 
-.card-container {
-  margin: 10rem;
-  font-size: $playercard-font-size;
-  color: white;
-}
-
 // ============  ============  ============
 // CARD FRONT
 // ============  ============  ============
@@ -158,7 +161,7 @@ $playercard-sticker-color: rgb(23, 35, 142);
 
   h2 {
     position: absolute;
-    top: -20%;
+    top: -50%;
     left: 20%;
     transform: rotateZ(-90deg);
     transform-origin: left;

@@ -1,0 +1,8 @@
+[class^="member-card-container-"] {
+    margin-inline: auto;
+    margin-block: 5rem;
+    max-width: 80%;
+    @include flex-modulable(null, null, null, 4rem);
+    flex-wrap: wrap;
+    place-items: center;
+}

@@ -8,35 +8,34 @@ function PlayerCard(props) {
           <img className="general__img" src="./img/profilpicture.jpg" alt="" />
         </figure>
         <article className="card__front-text">
-          <h2 className="card__front-position">Goalkeeper</h2>
+          <h2 className="card__front-position">{props.cardparam.position}</h2>
           <ul className="card__front-stats">
-            <PlayerCardStat actionName="Saved" actionValue="5" />
-            <PlayerCardStat actionName="Dribble" actionValue="5" />
-            <PlayerCardStat actionName="Tackle" actionValue="5" />
-            <PlayerCardStat actionName="Assist" actionValue="5" />
-            <PlayerCardStat actionName="Goal" actionValue="5" />
+            <PlayerCardStat actionName="Saved" actionValue={props.cardparam.shootSaved} />
+            <PlayerCardStat actionName="Dribble" actionValue={props.cardparam.dribbling} />
+            <PlayerCardStat actionName="Tackle" actionValue={props.cardparam.tackling} />
+            <PlayerCardStat actionName="Assist" actionValue={props.cardparam.assist} />
+            <PlayerCardStat actionName="Goal" actionValue={props.cardparam.goal} />
           </ul>
         </article>
       </article>
 
       <article className="card__back">
         <div className="card__back-name">
-          <h3>Roger</h3>
-          <h2>Cadri</h2>
+          <h3>{props.cardparam.name}</h3>
+          <h2>{props.cardparam.LastName}</h2>
         </div>
 
         <div className="card__back-infolist">
           <ul className="card__back-infolist-flex">
-            <li>President</li>
-            <li>45</li>
+            <li>{props.cardparam.role}</li>
+            <li>{props.cardparam.age}</li>
             <li>
               <div>Member since</div>
               <div>:</div>
-              <div>5</div>
+              <div>{props.cardparam.memberSince}</div>
             </li>
             <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt adipisci eaque soluta tempore numquam
-              velit.
+              {props.cardparam.aboutMe}
             </li>
           </ul>
         </div>

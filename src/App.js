@@ -1,5 +1,6 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import {PlayerCard} from "./components/PlayerCard.js";
+
+import {Members} from "./pages/Members.js";
 
 import {NavBar} from "./components/NavBar.js";
 
@@ -15,7 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="Blog" element={<Blog />} />
         <Route path="Contact" element={<Contact />} />
-        <Route path="PlayerCard" element={<PlayerCard />} />
+        <Route path="Members" element={<Members />} />
       </Routes>
     </BrowserRouter>
   );
