@@ -1,4 +1,4 @@
-const membersData = [
+const MembersData = [
     {
         id: 1,
         name: 'Roger',
@@ -24,7 +24,7 @@ const membersData = [
         name: 'Marselle',
         LastName: 'Delasalle',
         role: 'Tresorier',
-        position: 'Right fullStack',
+        position: 'Full Back',
         age: 38,
 
         stats: {
@@ -44,7 +44,7 @@ const membersData = [
         name: 'Stephen',
         LastName: 'Bjorcktruc',
         role: 'Assemblé Générale',
-        position: 'Center back',
+        position: 'Center Back',
         age: 47,
 
         stats: {
@@ -64,7 +64,7 @@ const membersData = [
         name: 'Christophe',
         LastName: 'Renekae',
         role: 'Secretaire',
-        position: 'Central',
+        position: 'Central Midfielder',
         age: 45,
 
         stats: {
@@ -84,7 +84,7 @@ const membersData = [
         name: 'Pauline',
         LastName: 'Merlin',
         role: 'Conseil d\'administration',
-        position: "defensive middle field",
+        position: "Defensive Midfielder",
         age: 25,
 
         stats: {
@@ -121,4 +121,4 @@ const membersData = [
     
 ]
 
-export {membersData};
+export {MembersData};

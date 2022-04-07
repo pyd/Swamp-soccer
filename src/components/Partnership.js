@@ -1,6 +1,8 @@
 import React from "react";
+import { GiWashingMachine } from "react-icons/gi";
+import { FaAmbulance, FaBath, FaBandAid, FaFrog, FaCloudShowersHeavy } from "react-icons/fa";
 
-// Wanna add font awesome icons for partner but I had trouble to import them
+
 // == Component
 const Partnership = () => {
     return (
@@ -8,17 +10,30 @@ const Partnership = () => {
             <h2>Ils nous font déjà confiance</h2>
             <ul className="content">
                 <li className="partner">
-                    <img></img>
+                <GiWashingMachine />
                     <p>Les vendeurs de machine à laver</p>
                 </li>
+
                 <li className="partner">
-                    <img></img>
-                    <p>La team Shreck</p>
+                <FaBath/>
+                <p>Les boules de bain</p>
+                </li>
+
+                <li className="partner">
+                    <FaAmbulance />
+                    <p>Les ambulanciers</p>
                 </li>
                 <li className="partner">
-                    <img></img>
-                    <p>L'association Tadmorv</p>
+                    <FaFrog />
+                    <p>Les marais de Shreck</p>
                 </li>
+
+                <li className="partner">
+                    <FaCloudShowersHeavy />
+                    <p>La météo du Nord</p>
+                </li>
+
+
             </ul>
         </div>
     )

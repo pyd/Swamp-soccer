@@ -1,28 +1,30 @@
-import {PlayerCard} from "./../components/PlayerCard.js";
-import {membersData} from "./../components/DataMembers.js";
+import {MemberCard} from "../components/MemberCard.js";
+import {MembersData} from "./../components/DataMembers.js";
 
 function Members() {
-  const addMemberCard = membersData.map((cardparam) => {
-    return <PlayerCard key={cardparam.id} cardparam={cardparam} />;
-  });
-
-  const goalkeeperArray = membersData.filter(function (position) {
-    return position.position == "Goalkeeper";
+  // -------------------------------------------------------------
+  const goalkeeperArray = MembersData.filter(function (position) {
+    return position.position === "Goalkeeper";
   });
   const goalKeeperList = goalkeeperArray.map((cardparam) => {
-    return <PlayerCard key={cardparam.id} cardparam={cardparam} />;
+    return <MemberCard key={cardparam.id} cardparam={cardparam} />;
   });
 
-  const attackArray = membersData.filter(function (position) {
-    return position.position.includes("fullStack") || 
-    position.position.includes("Winger");
+  // -------------------------------------------------------------
+  const attackArray = MembersData.filter(function (position) {
+    return position.position.includes("Central") || position.position.includes("Winger");
   });
-  
-  const defenseArray = membersData.filter(function (position) {
-    return position.position.includes("back") || 
-    position.position.includes("defensive");
+  const attackArrayList = attackArray.map((cardparam) => {
+    return <MemberCard key={cardparam.id} cardparam={cardparam} />;
   });
 
+  // -------------------------------------------------------------
+  const defenseArray = MembersData.filter(function (position) {
+    return position.position.includes("Back") || position.position.includes("Defensive");
+  });
+  const defenseArrayList = defenseArray.map((cardparam) => {
+    return <MemberCard key={cardparam.id} cardparam={cardparam} />;
+  });
 
   return (
     <>
@@ -32,11 +34,11 @@ function Members() {
       </section>
       <section className="member-card-container-attack">
         <h2>Attack</h2>
-        {addMemberCard}
+        {attackArrayList}
       </section>
       <section className="member-card-container-defense">
         <h2>Defense</h2>
-        {addMemberCard}
+        {defenseArrayList}
       </section>
     </>
   );
