@@ -16,10 +16,13 @@
 
 // 5. Components
 @import
+  'components/playerCard',
+  'components/playerCardStat',
   'components/header',
   'components/navigation',
   'components/footer';
 
 // 6. Page-specific styles
 @import
+  'pages/members',
   'pages/home';
