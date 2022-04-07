@@ -6,17 +6,35 @@ function Members() {
     return <PlayerCard key={cardparam.id} cardparam={cardparam} />;
   });
 
+  const goalkeeperArray = membersData.filter(function (position) {
+    return position.position == "Goalkeeper";
+  });
+  const goalKeeperList = goalkeeperArray.map((cardparam) => {
+    return <PlayerCard key={cardparam.id} cardparam={cardparam} />;
+  });
+
+  const attackArray = membersData.filter(function (position) {
+    return position.position.includes("fullStack") || 
+    position.position.includes("Winger");
+  });
+  
+  const defenseArray = membersData.filter(function (position) {
+    return position.position.includes("back") || 
+    position.position.includes("defensive");
+  });
+
+
   return (
     <>
-      <section class="member-card-container-goal">
+      <section className="member-card-container-goal">
         <h2>GoalKeeper</h2>
-        {addMemberCard}
+        {goalKeeperList}
       </section>
-      <section class="member-card-container-attack">
+      <section className="member-card-container-attack">
         <h2>Attack</h2>
         {addMemberCard}
       </section>
-      <section class="member-card-container-defense">
+      <section className="member-card-container-defense">
         <h2>Defense</h2>
         {addMemberCard}
       </section>
