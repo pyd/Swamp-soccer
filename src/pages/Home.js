@@ -6,7 +6,7 @@ import Stats from "../components/Stats";
 
 
 
-// == Page
+// === Page
 const Home = () => {
     return (
         <div className="home">
