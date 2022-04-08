@@ -1,17 +1,43 @@
 .partnership{
-    font-size: 1rem;
-    text-align: justify;
-    padding: 0 5rem 0 5rem;
-    color : $text-secondary-color;
-    // background: $secondary-color;
-    padding: 2rem;
-    text-align: center;
-    text-transform: uppercase;
     display: table;
     margin: 0 auto;
+    text-align: center;
+    padding-top: 5rem;
+    text-transform: uppercase;
+    color : $text-secondary-color;
+    font-size: 1rem;
 
-    .content{
-        display : flex;
-        margin: 1rem;
+    .row{
+        margin-top: 3%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .partner--col{
+        flex-basis: 31%;
+        background: $partnership-bg-color;
+        border-radius: 1rem;
+        margin-bottom: 5%;
+        padding: 5rem 3rem;
+        margin: 1%;
+        transition: 0.5s;
+
+        &:hover{
+            box-shadow: 0 0 1.5rem 0 $partnership-box-shadow-color;
+        }
+
+        .icon{
+            font-size: 4rem;
+        }
+
+        p{
+            padding-top: 10%;
+        }
+    }
+}
+
+@media(max-width: $medium-screen) {
+    .row{
+        flex-direction: column;
     }
 }

@@ -56,6 +56,9 @@ $base-url: '/assets/' !default;
 
 /// VARIABLES PROJECT
 
+/// Breakpoints
+$medium-screen: 768px;
+
 /// Navigation
 $nagivation-bg-color: #24252A;
 $nagivation-link-color: #edf0f1;
@@ -63,30 +66,21 @@ $nagivation-link-color-hover: orange;
 $nagivation-bg-btn-color: orange;
 $nagivation-bg-btn-color-hover: rgb(220, 143, 1);
 
-
 /// Main colors
 $first-color : orange;
 $secondary-color : #24252A;
-
-$text-color-home: rgb(255, 255, 255);
-$text-secondary-color: rgb(0, 0, 0);
-
-
-/// Gradient color bg (Hero component)
-$first-gradient-color : #1F0858;
-$secondary-gradient-color : #4B38A1;
-$third-gradient-color : #946CC4;
-
 
 /// Hero
 $hero-title-color : #ffffff;
 $hero-btn-text-color : #ffffff;
 
+/// Stat
+$stat-text-label-color : black;
+$stat-text-number-color : rgb(0, 0, 0);
+$stat-text-color : rgba(0, 0, 0, 0.63);
+$stat-label-bg-color : white;
 
-/// Stats
-$text-label-color : black;
-$text-number-color : rgb(0, 0, 0);
-$text-stat-color : rgba(0, 0, 0, 0.63);
-$bg-label : white;
-
+/// Partnership
+$partnership-bg-color: #fff3f3;
+$partnership-box-shadow-color: rgba(0, 0, 0, 0.2);
 

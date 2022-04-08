@@ -48,8 +48,8 @@
         width: 15rem;
         font-size: .9rem;
         text-align: center;
-        color: $text-label-color;
-        background-color: $bg-label;
+        color: $stat-text-label-color;
+        background-color: $stat-label-bg-color;
     }
 
     .bonus {
@@ -57,14 +57,14 @@
         margin: 1rem;
 
         span {
-            color: $text-number-color;
+            color: $stat-text-number-color;
             margin: 1rem;
             font-size: 4rem;
             font-weight: 600;
         }
 
         p {
-            color: $text-stat-color;
+            color: $stat-text-color;
             margin-top: -1rem;
         }
     }
