@@ -54,19 +54,29 @@ $base-url: '/assets/' !default;
 
 // ============ ============ ============ ============ ============ ============ ============ ============
 
-/// Color project
-// Blue versions
+/// VARIABLES PROJECT
+
+/// Navigation
+$nagivation-bg-color: #24252A;
+$nagivation-link-color: #edf0f1;
+$nagivation-link-color-hover: orange;
+$nagivation-bg-btn-color: orange;
+$nagivation-bg-btn-color-hover: rgb(220, 143, 1);
+
+
+
+// Blue version
 // $first-color : #00C8FF;
 // $secondary-color : #2A0057;
 
-$first-color : #ffd900;
-$secondary-color : #06000c;
+$first-color : orange;
+$secondary-color : #24252A;
 
 $text-color-home: rgb(255, 255, 255);
 $text-secondary-color: rgb(0, 0, 0);
 
 
-/// Gradient color bg
+/// Gradient color bg (Hero component)
 $first-gradient-color : #1F0858;
 $secondary-gradient-color : #4B38A1;
 $third-gradient-color : #946CC4;
@@ -83,3 +93,5 @@ $text-label-color : black;
 $text-number-color : rgb(0, 0, 0);
 $text-stat-color : rgba(0, 0, 0, 0.63);
 $bg-label : white;
+
+
