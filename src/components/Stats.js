@@ -1,12 +1,13 @@
 import React from "react";
+import { IoFootballOutline } from "react-icons/io5";
 
 // == Component
 const Stats = () => {
     return (
-        <div className="stat-container">
+        <div className="statistiques">
             <div className="stats">
                 <div className="container">
-
+                
                     <h2 className="label">Nos chiffres clés</h2>
 
                     <div className="bonus">
@@ -29,8 +30,9 @@ const Stats = () => {
                         <p>poteries offertes</p>
                     </div>
                 </div>
+                
             </div>
-
+            <IoFootballOutline className="icon"/>
         </div>
 
     )
