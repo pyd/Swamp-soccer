@@ -62,23 +62,30 @@ $medium-screen: 768px;
 /// Navigation
 $nagivation-bg-color: #24252A;
 $nagivation-link-color: #edf0f1;
-$nagivation-link-color-hover: orange;
-$nagivation-bg-btn-color: orange;
-$nagivation-bg-btn-color-hover: rgb(220, 143, 1);
+$nagivation-link-color-hover: #FF8F00;
+$nagivation-bg-btn-color: #FF8F00;
+$nagivation-bg-btn-color-hover: rgb(194, 126, 2);
 
 /// Main colors
-$first-color : orange;
+$first-color : #FF8F00;
 $secondary-color : #24252A;
 
 /// Hero
 $hero-title-color : #ffffff;
 $hero-btn-text-color : #ffffff;
 
+/// Presentation
+$presentation-bg-color: #FF8F00;
+$presentation-text-color: #24252A;
+$presentation-span-text-color: #ffffff;
+
 /// Stat
-$stat-text-label-color : black;
-$stat-text-number-color : rgb(0, 0, 0);
-$stat-text-color : rgba(0, 0, 0, 0.63);
-$stat-label-bg-color : white;
+$stat-bg-color: rgb(0, 0, 0);
+$stat-label-bg-color : $stat-bg-color;
+$stat-text-label-color : $first-color;
+$stat-text-number-color : $first-color;
+$stat-text-color : #ff910076;
+
 
 /// Partnership
 $partnership-bg-color: #fff3f3;
