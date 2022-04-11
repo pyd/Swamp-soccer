@@ -80,3 +80,15 @@
         top: 75%;
     }
 }
+
+@media(max-width: $medium-screen) {
+    .presentation {
+        h2{
+            font-size: $font-size-mobile-subtitle;
+        }
+    
+        p{
+            font-size: $font-size-mobile-standart;
+        }
+    }
+}

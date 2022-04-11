@@ -56,3 +56,29 @@
     padding: 3rem 2rem 3rem 2rem;
     text-align: center;
 }
+
+@media(max-width: $medium-screen) {
+        .hero {
+            .content{
+                width: 90%;
+                top: 85%;
+
+
+                .hero__title{
+                    font-size: $font-size-mobile-title;
+
+                    .icon{
+                         display: none;
+                    }
+                }
+            }
+            .hero__btns{
+                flex-direction: column;
+
+                p{
+                    font-size: $font-size-mobile-standart;
+                }
+                
+        }
+    }
+}
