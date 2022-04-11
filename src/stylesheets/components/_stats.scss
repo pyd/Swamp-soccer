@@ -82,13 +82,47 @@
 }
 
 @media(max-width: $medium-screen) {
-    .presentation {
-        h2{
-            font-size: $font-size-mobile-subtitle;
+    .statistiques {
+        padding: 3rem;
+
+        .stats{
+
+
+            .container{
+                display: flex;
+                flex-direction: column;
+                border: none;
+                padding: 0;
+
+                &::before {
+                    display: none;
+                  }        
+        
+                &::after {
+                    display: none;
+                  }
+            }
+
+            .label {
+                position: initial;
+                font-size: $font-size-mobile-subtitle;
+                background-color: transparent;
+            }
+        
+            .bonus {
+        
+                span {
+                    margin: .5rem;
+                    font-size: $font-size-mobile-subtitle;
+                }
+        
+                p {
+                    color: $stat-text-color;
+                    margin-top: .5rem;
+                    font-size: $font-size-mobile-standart;
+                }
+            }
         }
     
-        p{
-            font-size: $font-size-mobile-standart;
-        }
     }
 }

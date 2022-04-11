@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
@@ -27,13 +27,18 @@ const Navigation = () => {
                         Notre histoire
                         </NavLink>
                     </li>
-                </ul>
-            </nav>
-            <button>
+                    <li>
+                    <button>
                 <NavLink to="/Contact" className={(nav) => (nav.isActive ? "nav-active" : "")}>
                         Contact
                 </NavLink>
             </button>
+                    </li>
+                </ul>
+            </nav>
+            <div className="nav__toggle">
+                <div className="bar" />
+            </div>
         </header>
     )
 }

@@ -1,17 +1,12 @@
-.navbar {
-    font-size: $font-size-standart;
-    color: black;
-}
-
-/***** Navigation ******/
-
 .navigation{
-    // position: fixed;
+    position: fixed;
+    width: 100%;
     background-color: $nagivation-bg-color;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 1rem 3%;
+    z-index: 3;
 
     h2, li, a, button{
         font-family: $font-text;
@@ -49,7 +44,57 @@
         transition: all 0.3s ease 0s;
 
         &:hover{
-            background-color: $nagivation-bg-btn-color-hover;
+            background-color: $nagivation-link-color;
+        }
+    }
+
+    .nav__toggle{
+        display: none;
+    }
+}
+
+@media(max-width: $medium-screen) {
+    .navigation {
+        padding: 0;
+        padding-left: 2rem;
+
+        .nav__links{
+            position: absolute;
+            top: 5rem;
+            display: flex;
+            flex-direction: column;
+            background: $nagivation-mobile-bg-color;
+            left: 0;
+            width: 100%;
+
+            li{
+                margin: 1rem;
+                // transform: translateX(100%);
+                transition: all 0.45s;
+            }
+
+        }
+
+        button{
+            margin-left: 0rem;
+        }
+
+        .nav__toggle{
+            display: flex;
+            width: 5rem;
+            height: 5rem;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+
+            .bar{
+                position: relative;
+                width: 2rem;
+                height: .1rem;
+                background: $nagivation-link-color;
+                transition: all 0.45s ease-in-out;
+            }
         }
     }
 }
