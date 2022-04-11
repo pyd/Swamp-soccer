@@ -3,6 +3,7 @@ import Presentation from "../components/Presentation";
 import Transition from "../components/Transition";
 import Partnership from "../components/Partnership";
 import Stats from "../components/Stats";
+import Navigation from "../components/Navigation";
 
 
 
@@ -11,6 +12,7 @@ const Home = () => {
     return (
         <div className="home">
             <Hero />
+            <Navigation />
             <Stats />
             <Presentation />
             <Transition />
