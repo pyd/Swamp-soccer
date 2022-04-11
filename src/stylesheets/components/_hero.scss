@@ -1,49 +1,58 @@
 .hero{
     text-align: center;
-    color : $text-color-home;
-}
 
-.bg{
-     background-color: #000000;
-     background-image: 
-                       linear-gradient(rgba(255, 255, 255, 0.034),
-                         rgba(0, 0, 0, 0.6)),
-                         url(https://www.topendsports.com/sport/unusual/images/mud-running.jpg);
-    background-position: center;
-    background-size: cover;
-    color: #ffffff;
-    padding: 3rem 2rem 3rem 2rem;
-    text-align: center;
+    .content{
+        width: 90%;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        .hero__title{
+            font-family: $font-title;
+            color: $hero-title-color;
+            text-transform: uppercase;
+            font-size: 6rem;
+            font-weight: 500;
+    
+            .icon{
+                font-size: 3rem;
+                 margin-left: .5rem;
+                 margin-bottom: 3rem;
+            }
+        }
+    
+        .hero__btns{
+            display : flex;
+            justify-content: center;
+            color: $hero-btn-text-color;
+        
+            p {
+                background: $first-color;
+                padding : 1rem;
+                padding-right: 3rem;
+                padding-left: 3rem;
+                font-weight: 600;
+                font-size: .9rem;
+            }
+        
+            .color2{
+                background-color: $secondary-color;
+            }
+    
+        }
+        
+    }
+}
 
    
-    // background: linear-gradient(4deg, $first-gradient-color 0%, $secondary-gradient-color 35%, $third-gradient-color 100%);
-}
-
-.hero__title{
-    font-family: $text-font-stack;
-    color: $hero-title-color;
-    justify-content: center;
-    text-transform: uppercase;
-    font-size: 6rem;
-    font-weight: 500;
-}
-
-.hero__btns{
-    display : flex;
-    justify-content: center;
-    font-family: $text-font-stack;
-    color: $hero-btn-text-color;
-
-    p {
-        background: $first-color;
-        padding : 1rem;
-        padding-right: 3rem;
-        padding-left: 3rem;
-        font-weight: 600;
-        font-size: .9rem;
-    }
-
-    .color2{
-        background-color: $secondary-color;
-    }
+.bg{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.034), rgba(0, 0, 0, 0.9)),
+                        url(https://pbs.twimg.com/media/CnfxKSwXgAAvhpC.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding: 3rem 2rem 3rem 2rem;
+    text-align: center;
 }
