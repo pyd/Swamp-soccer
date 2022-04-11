@@ -6,14 +6,14 @@ import Stats from "../components/Stats";
 
 
 
-// == Page
+// === Page
 const Home = () => {
     return (
         <div className="home">
             <Hero />
-            <Stats />
+             <Stats />
             <Presentation />
-            <Transition />
+            {/* <Transition /> */}
             <Partnership />
         </div>
     )
