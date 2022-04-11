@@ -1,9 +1,31 @@
-[class^="member-card-container-"] {
-    font-size: 1.1rem;
-    margin-inline: auto;
-    margin-block: 5rem;
-    max-width: 80%;
-    @include flex-modulable(null, null, null, 4rem);
-    flex-wrap: wrap;
-    place-items: center;
+
+[class^="member__position-container-"] {
+  margin: 8rem auto;
+  max-width: 70%;
+  @include flex-modulable(column, null, center, 3rem);
+  position: relative;
+
+  &::after {
+    content:"";
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    z-index: -1;
+
+    width: 20rem;
+    height: 90%;
+    background-color: rgb(85, 112, 138);
+  }
+
+}
+
+.member__cards-container {
+  @include flex-modulable(column, null, center, 3rem);
+}
+
+
+.member__categorie-h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
