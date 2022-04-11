@@ -20,7 +20,6 @@ $playercard-back-line-height: 5rem;
 $playercard-back-line-bottom-pos: -17px;
 $playercard-back-line-right-pos: 1.8rem;
 
-
 // TEMP PARAMETER
 .card-container {
   position: absolute;
@@ -38,16 +37,6 @@ $playercard-back-line-right-pos: 1.8rem;
   perspective: 1000px;
 
   font-size: $playercard-font-size;
-
-  // ----------------  ----------------  ----------------  ----------------  ----------------  ----------------
-  &:hover {
-    .card__front {
-      transform: rotateY(-180deg) rotateZ(15deg);
-    }
-    .card__back {
-      transform: rotateY(0deg);
-    }
-  }
 }
 
 // -------------------------------------------
@@ -60,8 +49,6 @@ $playercard-back-line-right-pos: 1.8rem;
 
   // ----------------  ----------------  ----------------  ----------------  ----------------  ----------------
   backface-visibility: hidden;
-  transform: rotateY(0deg);
-  transition: transform $playercard-transform-time;
 
   transform-style: preserve-3d;
 
@@ -99,14 +86,9 @@ $playercard-back-line-right-pos: 1.8rem;
 
   box-shadow: $playercard-general-box-shadow;
 
-  // ----------------  ----------------  ----------------  ----------------  ----------------  ----------------
   backface-visibility: hidden;
-  // transform: rotateY(0deg);
-  transform: rotateY(180deg) rotateZ(-15deg);
-  transition: transform $playercard-transform-time;
 
   transform-style: preserve-3d;
-
   //________
   .card__back-infolist {
     position: absolute;
@@ -144,6 +126,34 @@ $playercard-sticker-color: rgb(23, 35, 142);
   left: $playercard-sticker-pos;
 
   box-shadow: $playercard-box-shadow-sticker-back;
+}
+
+// -------------------------------------------
+// ROTATION
+// -------------------------------------------
+
+.card-container {
+  &:hover {
+    .card__front {
+      transform: rotateY(-180deg);
+      // transform: rotateY(-180deg) rotateZ(15deg);
+    }
+    .card__back {
+      transform: rotateY(0deg);
+    }
+  }
+}
+
+.card__front {
+  transform: rotateY(0deg);
+  transition: transform $playercard-transform-time;
+
+}
+
+.card__back {
+  transform: rotateY(180deg);
+  // transform: rotateY(180deg) rotateZ(-15deg);
+  transition: transform $playercard-transform-time;
 }
 
 // ============  ============  ============  ============  ============  ============  ============

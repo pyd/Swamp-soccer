@@ -8,12 +8,6 @@ function NavBar() {
           <Link to="/">HOME</Link>
         </li>
         <li>
-          <Link to="/Blog">BLOG</Link>
-        </li>
-        <li>
-          <Link to="/Contact">CONTACT</Link>
-        </li>
-        <li>
           <Link to="/Members">NOS MEMBRES</Link>
         </li>
       </ul>
