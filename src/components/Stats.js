@@ -32,7 +32,7 @@ const Stats = () => {
                 </div>
                 
             </div>
-            <IoFootballOutline className="icon"/>
+            {/* <IoFootballOutline className="icon"/> */}
         </div>
 
     )

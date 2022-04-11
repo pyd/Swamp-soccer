@@ -1,5 +1,5 @@
 .navbar {
-    font-size: 1.2rem;
+    font-size: $font-size-standart;
     color: black;
 }
 
@@ -16,7 +16,7 @@
     h2, li, a, button{
         font-family: $font-text;
         font-weight: 500;
-        font-size: 1.2rem;
+        font-size: $font-size-standart;
         color: $nagivation-link-color;
         text-decoration: none;
     }

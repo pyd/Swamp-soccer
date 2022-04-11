@@ -4,7 +4,13 @@
     text-align: center;
     padding-top: 3%;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: $font-size-standart;
+
+    h2{
+        font-size: $font-size-subtitle;
+        font-family: $font-title;
+        letter-spacing: .3rem;
+    }
 
     .row{
         margin-top: 3%;
@@ -17,7 +23,7 @@
         background: $partnership-bg-color;
         border-radius: 1rem;
         margin-bottom: 5%;
-        padding: 5rem 3rem;
+        padding: 3rem;
         margin: 1%;
         transition: 0.5s;
 
@@ -26,11 +32,12 @@
         }
 
         .icon{
-            font-size: 4rem;
+            font-size: 2rem;
         }
 
         p{
             padding-top: 10%;
+            font-size: $font-size-standart;
         }
     }
 }

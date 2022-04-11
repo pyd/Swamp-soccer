@@ -1,6 +1,5 @@
 .statistiques {
    padding-top: 5rem;
-   font-size: 1.5rem;
    padding: 3% 10% 3% 10%;
    color: $first-color;
    background: $stat-bg-color;
@@ -46,7 +45,7 @@
         position: absolute;
         top: -2rem;
         right: 50%;
-        font-size: 3rem;
+        font-size: $font-size-subtitle;
         text-align: center;
         color: $stat-text-label-color;
         background-color: $stat-label-bg-color;
@@ -61,13 +60,14 @@
         span {
             color: $stat-text-number-color;
             margin: 1rem;
-            font-size: 4rem;
+            font-size: $font-size-subtitle;
             font-weight: 600;
         }
 
         p {
             color: $stat-text-color;
-            margin-top: -1rem;
+            margin-top: .5rem;
+            font-size: $font-size-standart;
         }
     }
 
@@ -80,9 +80,3 @@
         top: 75%;
     }
 }
-
-
-
-
-
-
