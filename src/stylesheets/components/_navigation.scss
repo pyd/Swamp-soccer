@@ -66,10 +66,10 @@
             background: $nagivation-mobile-bg-color;
             left: 0;
             width: 100%;
+            transition: all 0.45s;
 
             li{
                 margin: 1rem;
-                // transform: translateX(100%);
                 transition: all 0.45s;
             }
 
@@ -85,16 +85,16 @@
             height: 5rem;
             align-items: center;
             justify-content: center;
+            transition: all 0.45s ease-in-out;
             cursor: pointer;
-
 
             .bar{
                 position: relative;
                 width: 2rem;
                 height: .1rem;
                 background: $nagivation-link-color;
-                transition: all 0.45s ease-in-out;
             }
         }
+
     }
 }
