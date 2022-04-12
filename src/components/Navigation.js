@@ -10,9 +10,14 @@ const Navigation = () => {
         setToggleMenu(!toggleMenu);
     };
 
+    window.onresize = () => {
+        if (window.innerWidth > 768){
+            setToggleMenu(true);
+        }
+    }
+
     return (
         <header className="navigation">
-            {/* <img className="logo" src="#" alt="logo" /> */}
             <h2 className="logo">
                 <NavLink to="/" >
                     Foot 2 boue <IoFootballOutline className="icon" />
