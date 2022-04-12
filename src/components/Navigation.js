@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { IoFootballOutline } from "react-icons/io5";
 
 const Navigation = () => {
+
+    const [toggleMenu, setToggleMenu] = useState(true);
+
+    const toggleNavSmallScreen = () => {
+        setToggleMenu(!toggleMenu);
+    };
+
+    window.onresize = () => {
+        if (window.innerWidth > 768){
+            setToggleMenu(true);
+        }
+    }
+
     return (
         <header className="navigation">
-            {/* <img className="logo" src="#" alt="logo" /> */}
             <h2 className="logo">
-                <NavLink to="/" className={(nav) => (nav.isActive ? "nav-active" : "")}>
-                    Foot 2 boue
+                <NavLink to="/" >
+                    Foot 2 boue <IoFootballOutline className="icon" />
                 </NavLink>
             </h2>
             <nav>
@@ -29,11 +42,11 @@ const Navigation = () => {
                     </li>
                 </ul>
             </nav>
-            <button>
-                <NavLink to="/Contact" className={(nav) => (nav.isActive ? "nav-active" : "")}>
-                        Contact
-                </NavLink>
-            </button>
+            <div className="nav__toggle"
+                onClick={toggleNavSmallScreen}
+            >
+                <div className="bar" />
+            </div>
         </header>
     )
 }
