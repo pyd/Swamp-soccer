@@ -35,5 +35,7 @@ const Navigation = () => {
                 </NavLink>
             </button>
         </header>
+    )
+}
 
 export default Navigation;
