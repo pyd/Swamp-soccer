@@ -9,3 +9,12 @@ body {
 body {
   font-size: 10px;
 }
+
+// IMPORT fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Flavors&family=Fredoka+One&family=Joti+One&family=Piedra&family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+$font-text: "Montserrat", sans-serif;
+$font-title: 'Bangers', cursive;
+$font-title2: "Rampart One", cursive;
