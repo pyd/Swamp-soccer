@@ -1,0 +1,34 @@
+//page infosContenu.scss
+
+h3{ 
+    font-family: 'Bangers', cursive;
+    font-size: 3rem;
+    margin: 2rem;
+    text-decoration: underline;
+}
+.annonce{
+    display: flex;
+    justify-content:space-around ;
+}
+.descrip{
+    margin: 4rem;
+    padding: 5rem;
+    font-size: 1.5rem ;
+}
+h4{
+    font-size: 2rem ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+
+}
+.detail{
+    margin: 5rem;
+    p{
+        font-size: 1.5rem;
+    }
+}
+.conclu{
+    color:$presentation-bg-color;
+    margin: 4rem;
+    text-align: center;
+}
