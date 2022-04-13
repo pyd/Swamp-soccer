@@ -40,6 +40,11 @@ const Navigation = () => {
                         Notre histoire
                         </NavLink>
                     </li>
+                    <li>
+                        <NavLink to="/contact" className={(nav) => (nav.isActive ? "nav-active" : "")}>
+                        Contact
+                        </NavLink>
+                    </li>
                 </ul>
             </nav>
             <div className="nav__toggle"
