@@ -26,10 +26,13 @@
   'components/stats',
   'components/partnership',
   'components/footer',
-  'components/infoscontenu';
+  'components/infoscontenu',
+  'components/histoireContenu';
   
 
 // 6. Page-specific styles
 @import
   'pages/members',
-  'pages/home';
+  'pages/home',
+  'pages/infos',
+  'pages/histoire';

@@ -6,6 +6,8 @@ import Home from "./pages/Home.js";
 import Navigation from "./components/Navigation.js";
 import Infos from "./pages/Infos.js";
 import Footer from "./components/Footer.js";
+import Histoire from "./pages/Histoire.js";
+
 
 function App() {
   return (
@@ -14,7 +16,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Infos" element={<Infos />} />
-        <Route path="Members" element={<Members />} />
+        <Route path="/Members" element={<Members />} />
+        <Route path="/Histoire" element={<Histoire/>} />
       </Routes>
       <Footer />
     </BrowserRouter>
