@@ -12,7 +12,7 @@ const Hero = () => {
                 <div className="hero__btns">
                     <p>Prêt à en découdre ?</p>
                     <p className="color2">
-                        Découvez nous aujourd'hui !
+                        Découvrez nous aujourd'hui !
                     </p>
                 </div>
             </div>

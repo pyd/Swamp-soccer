@@ -1,5 +1,4 @@
 import React from "react";
-import { IoFootballOutline } from "react-icons/io5";
 
 // == Component
 const Stats = () => {
@@ -32,7 +31,6 @@ const Stats = () => {
                 </div>
                 
             </div>
-            <IoFootballOutline className="icon"/>
         </div>
 
     )
