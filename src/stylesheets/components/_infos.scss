@@ -1,33 +1,86 @@
 .infos {
+  margin: 1rem;
 
-  .infos__content--title {
-    font-family: "Bangers", cursive;
-    font-size: 3rem;
-    margin: 2rem;
-  }
-  .info__item {
-    display: flex;
-    justify-content: space-around;
-  }
-  .info__item--desc {
-    margin: 4rem;
-    padding: 5rem;
-    font-size: 1.5rem;
-  }
-  h4 {
-    font-size: 2rem;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-style: italic;
-  }
-  .info__item__detail {
-    margin: 5rem;
-    p {
-      font-size: 1.5rem;
-    }
-  }
-  .conclu {
-    // color: $presentation-bg-color;
-    margin: 4rem;
+  .infos--title {
+    font-family: $font-title;
+    font-size: $font-size-subtitle;
+    letter-spacing: .2rem;
+    margin: 3rem;
     text-align: center;
   }
+
+  .infos__content{
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+
+    .info__item{
+      flex-basis: 31%;
+      background: $partnership-bg-color;
+      border-radius: 1rem;
+      margin-bottom: 5%;
+      padding: 3rem;
+      margin: 1%;
+      transition: 0.5s;
+
+      &:hover{
+        box-shadow: 0 0 1.5rem 0 $partnership-box-shadow-color;
+    }
+
+      .info__item--desc{
+        font-size: $font-size-standart;
+        margin: .1rem;
+      }
+
+      .info__item--img{
+        width: 100%;
+        border-radius: .2rem;
+        margin: .1rem;
+      }
+    }
+
+    .info__item__content__detail{
+      font-size: $font-size-standart;
+      display: flex;
+      flex-wrap: wrap;
+
+      .info__item__detail--title{
+        font-family: $font-title;
+        font-size: $font-size-subtitle;
+        text-align: center;
+        letter-spacing: .2rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+      }
+
+      .info__item__detail--desc__content{
+        width: 20%;
+        margin: 0 auto;
+        
+      }
+
+      .info__item__detail--rules--championship{
+        display: flex;
+
+        li{
+          margin: .1rem;
+        }
+      }
+
+       .info__item__detail--desc, .info__item__detail--rules, .info__item__detail--end{
+        text-align: center;
+      }
+
+      .info__item__detail--end{
+        color: $nagivation-bg-btn-color;
+        margin: 1rem;
+      }
+    }
+
+
+
+  }
+
+
+
 }
