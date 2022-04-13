@@ -1,26 +1,36 @@
 // CSS for Contact component
 
 main.contact {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 3% 0;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3% 0;
+    }
     
     h1 {
-        padding-left: 10%;
-        margin-bottom: 3%;
-        font-style: italic;
-        color: black;
+        font-family: "Bangers", cursive;
+        font-size: 3rem;
+        margin: 2rem;
+    }
+    
+    .us, .form-container {
+        width: 70%;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 6px;
+        border: 1px solid lightgray;
     }
 
     .us {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        width: 100%;
-        padding-top: 30px;
-        padding-bottom: 30px;
         gap: 20px;
-        padding: 0 20px;
+
+        > * {
+            box-shadow: 2px 2px 3px 1px lightgray;;
+        }
 
         .coordonates {
             width: 300px;
@@ -38,48 +48,71 @@ main.contact {
     }
 
     h2 {
-        margin-top: 5%;
-        margin-bottom: 3%;
-        padding-left: 10%;
+        padding: 4px 30px;
+        margin-bottom: 20px;
         font-style: italic;
-    }
-        
-    form.message {
-        padding: 0 13%;
-        font-size: 1rem;
-
-        .row {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 2rem;
-            input {
-                flex-grow: 1;
-            }
-        }
-
-        textarea {
-            width: 100%;
-            margin-top: 36px;
-        }
-
-        .buttons {
-            text-align: left;
-            .swarm-btn {
-                margin-top: 20px;
-            }
-        }
+        color: rgb(201, 197, 178);
+        background-color: rgb(79, 74, 46, .8);
+        border-radius: 4px;
     }
 
-    .after-send {
-        text-align: center;
-        margin-top: 100px; 
-        font-size: 2rem;
-        background-color: pink;
+    .form-container {
 
-        button {
+        margin-top: 20px;
+        background: no-repeat url('../../public/img/mud-raccoon.jpg');
+        background-size: cover;
+        background-position: 0 -50px;
+
+        form {
+            padding: 0 13%;
             font-size: 1rem;
+
+            .row input, textarea {
+                border-radius: 4px;
+                border: none;
+                text-indent: 10px;
+                opacity: .9;
+            }
+
+            .row {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 2rem;
+
+                input {
+                    flex-grow: 1;
+                    line-height: 30px;
+                }
+            }
+            
+            textarea {
+                width: 100%;
+                min-height: 80px;
+                margin-top: 30px;
+            }
+
+            .buttons {
+
+                .swarm-btn {
+                    margin-top: 20px;
+                    padding: 0 6px;
+                    line-height: 30px;
+                    border-radius: 4px;
+                    border: none;
+                    background-color: rgb(79, 74, 46, .8);
+                    color: white;
+
+                    .icon {
+                        font-size: 30px;
+                    }
+                }
+                .swarm-btn:hover {
+                    cursor: pointer;
+                }
+            }
         }
+
     }
 }
 
