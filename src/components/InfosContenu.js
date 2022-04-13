@@ -3,7 +3,8 @@ import React from 'react';
 const InfosContenu = () => {
     return (
         <div>
-            <h3>Infos Utiles</h3>
+            <h3 className='utile1'>Infos Utiles</h3>
+
             <div className='annonce'>
                 <p className='descrip'>La Finlande organise en tous les ans à la mi-juillet la Coupe 
                  du monde de football dans la boue (swamp soccer). Le tournoi
@@ -34,12 +35,12 @@ const InfosContenu = () => {
                 
             </div>
             <div className='detail'>
-                <h4>DATE ET HORAIRE</h4>
+                <h4 className='utile2'>DATE ET HORAIRE</h4>
                 <p>La coupe du monde swamp soccer comme cette année commence
                   le 15 Juillet 2022  dans le marécage de Pölhövaara aux abords 
                   de Hyrynsalmi, dans l'est de la Finlande.
                 </p><br/><br/><br/>
-                <h4>REGLE DU JEUX</h4>
+                <h4 className='utile2'>REGLE DU JEUX</h4>
                 <ul>
                     <p>Prudence</p>
                     <p>Vigilance</p>
