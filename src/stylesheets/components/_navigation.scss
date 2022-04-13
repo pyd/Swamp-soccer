@@ -9,7 +9,7 @@
     padding: 1rem 3%;
     z-index: 3;
 
-    h2, li, a, button{
+    h2, li, a {
         font-family: $font-text;
         font-weight: 500;
         font-size: $font-size-standart;
@@ -26,6 +26,10 @@
         display: inline-block;
         padding: 0 1rem;
 
+        .active {
+            color: $nagivation-link-color-hover;
+        }
+
         a{
             transition: all 0.3s ease 0s;
 
@@ -35,19 +39,19 @@
         }
     }
 
-    button{
-        margin-left: .5rem;
-        padding: .5rem 1rem;
-        background-color: $nagivation-bg-btn-color;
-        border: none;
-        border-radius: 0.5rem;
-        cursor: pointer;
-        transition: all 0.3s ease 0s;
+    // button{
+    //     margin-left: .5rem;
+    //     padding: .5rem 1rem;
+    //     background-color: $nagivation-bg-btn-color;
+    //     border: none;
+    //     border-radius: 0.5rem;
+    //     cursor: pointer;
+    //     transition: all 0.3s ease 0s;
 
-        &:hover{
-            background-color: $nagivation-link-color;
-        }
-    }
+    //     &:hover{
+    //         background-color: $nagivation-link-color;
+    //     }
+    // }
 
 
     .nav__toggle{
