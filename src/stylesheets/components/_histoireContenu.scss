@@ -4,6 +4,7 @@
 }
 .histor{
     padding: 3rem;
+    font-size: 2rem;
 }
 .photo1{
     padding: 1rem;
@@ -36,11 +37,5 @@ span{
     -o-transition:all 0.2s ease-in;
     transition:all 0.2s ease-in;
 }
-.galerie :hover{
-    background-color: $presentation-bg-color; 
-    width: 120%;
-    height: auto;
-}
-
 
 

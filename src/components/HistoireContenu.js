@@ -3,13 +3,13 @@ import React from 'react';
 const HistoireContenu = () => {
     return (
         <div>
-            <h3>HISTOIRE</h3>
+            <h3 className='utile1'>HISTOIRE</h3>
             <div className='titre1'>
                 <div className='photo1'>
                     <img src='./foot1.jpg' alt='foot1' />
                 </div>
                 <di className='histor'>
-                    <h3>Le « swamp soccer » : un sport bien boueux </h3>
+                    <h3 className='utile2'>Le « swamp soccer » : un sport bien boueux </h3>
                     <h4 className='histo'>Si certains évitent de tacheter leurs maillots de football, d’autres préfèrent se
                         jeter dans de la boue… Découvrons le « swamp soccer ».
                         Le « swamp soccer » ou « foot de boue » est une sorte de dérivée du football traditionnel
@@ -28,7 +28,7 @@ const HistoireContenu = () => {
             </div><br />
             <div className='titre2'>
                 <div>
-                    <h3>GALERIE EQUIPES</h3>
+                    <h3 className='utile2'>GALERIE EQUIPES</h3>
                 </div>
                 <hr></hr>
                 <div className='photo'>
