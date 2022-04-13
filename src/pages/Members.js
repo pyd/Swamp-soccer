@@ -31,8 +31,10 @@ function Members() {
   const defenseArrayList = arrayMapOn(MemberCard, defenseArray);
 
   // -------------------------------------------------------------
+
+
   return (
-    <>
+    <div >
       <section className="member__position-container-goal">
         <h2 className="member__categorie-h2">GoalKeeper</h2>
         <div className="member__cards-container">{goalKeeperList}</div>
@@ -45,7 +47,7 @@ function Members() {
         <h2 className="member__categorie-h2">Defense</h2>
         <div className="member__cards-container">{defenseArrayList}</div>
       </section>
-    </>
+    </div>
   );
 }
 
