@@ -20,6 +20,8 @@ $playercard-back-line-height: 5rem;
 $playercard-back-line-bottom-pos: -17px;
 $playercard-back-line-right-pos: 1.8rem;
 
+$playercard-back-line-width: 0.1rem;
+
 // TEMP PARAMETER
 .card-container {
   position: absolute;
@@ -209,7 +211,7 @@ $playercard-sticker-color: rgb(23, 35, 142);
         position: absolute;
         content: "";
         width: 20%;
-        height: 0.2rem;
+        height: $playercard-back-line-width;
         background-color: white;
         bottom: 0;
         left: -20px;
@@ -217,7 +219,7 @@ $playercard-sticker-color: rgb(23, 35, 142);
       &:before {
         position: absolute;
         content: "";
-        width: 0.2rem;
+        width: $playercard-back-line-width;
         height: $playercard-back-line-height;
         background-color: white;
         bottom: -5rem;
@@ -264,7 +266,7 @@ $playercard-sticker-color: rgb(23, 35, 142);
           position: absolute;
           content: "";
           width: 20%;
-          height: 0.2rem;
+          height: $playercard-back-line-width;
           background-color: $playercard-color-font;
           bottom: $playercard-back-line-bottom-pos;
           right: $playercard-back-line-right-pos;
@@ -272,7 +274,7 @@ $playercard-sticker-color: rgb(23, 35, 142);
         &:before {
           position: absolute;
           content: "";
-          width: 0.2rem;
+          width: $playercard-back-line-width;
           height: $playercard-back-line-height;
           background-color: $playercard-color-font;
           bottom: -1rem;
