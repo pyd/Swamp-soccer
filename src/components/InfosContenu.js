@@ -2,7 +2,7 @@ import React from 'react';
 
 const InfosContenu = () => {
     return (
-        <div>
+        <div className="info">
             <h3>Infos Utiles</h3>
             <div className='annonce'>
                 <p className='descrip'>La Finlande organise en tous les ans à la mi-juillet la Coupe 
