@@ -54,7 +54,7 @@ const Navigation = () => {
                     </ul>
 
                 )}
-
+                
             </nav>
             <div className="nav__toggle"
                 onClick={toggleNavSmallScreen}
