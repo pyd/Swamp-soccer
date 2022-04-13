@@ -35,16 +35,16 @@ function Members() {
 
   return (
     <div >
-      <section className="member__position-container-goal">
-        <h2 className="member__categorie-h2">GoalKeeper</h2>
+      <section className="member__position-container goal">
+        <h2 className="member__categorie-h2">GoalKeeper(s)</h2>
         <div className="member__cards-container">{goalKeeperList}</div>
       </section>
-      <section className="member__position-container-attack">
-        <h2 className="member__categorie-h2">Attack</h2>
+      <section className="member__position-container attack">
+        <h2 className="member__categorie-h2">The Attack</h2>
         <div className="member__cards-container">{attackArrayList}</div>
       </section>
-      <section className="member__position-container-defense">
-        <h2 className="member__categorie-h2">Defense</h2>
+      <section className="member__position-container defense">
+        <h2 className="member__categorie-h2">The Defense</h2>
         <div className="member__cards-container">{defenseArrayList}</div>
       </section>
     </div>

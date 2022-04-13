@@ -14,22 +14,22 @@ function MemberCard(props) {
 
 
 
-  function touchStartTest(e) {
+  function touchStartTest(eStart) {
     console.log("TouchStart");
   }
  
-  function touchEndTest() {
+  function touchEndTest(eEnd) {
     console.log("TouchEnd");
 
     
   }
 
   return (
-    <section className={setRotateClass}  onTouchStart={touchStartTest} onTouchEnd={touchEndTest} >
+    <section className={setRotateClass}  onClick={cardButton}  onTouchStart={touchStartTest} onTouchEnd={touchEndTest} >
 
       <article className="card__front">
 
-      <IoArrowUndoCircle onClick={cardButton} className="card-icon icon-front" />
+      <IoArrowUndoCircle className="card-icon icon-front" />
       
         <figure>
           <img className="general__img" src="./img/profilpicture.jpg" alt="" />
@@ -48,7 +48,7 @@ function MemberCard(props) {
 
       <article className="card__back">
 
-        <IoArrowUndoCircle onClick={cardButton} class="card-icon icon-back" />
+        <IoArrowUndoCircle className="card-icon icon-back" />
 
         <div className="card__back-name">
           <h3>{props.cardparam.name}</h3>
