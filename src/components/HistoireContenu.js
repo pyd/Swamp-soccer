@@ -2,7 +2,7 @@ import React from 'react';
 
 const HistoireContenu = () => {
     return (
-        <div className="story">
+        <div>
             <h3>HISTOIRE</h3>
             <div className='titre1'>
                 <div className='photo1'>

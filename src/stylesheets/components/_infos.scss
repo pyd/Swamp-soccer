@@ -1,0 +1,33 @@
+.infos {
+
+  .infos__content--title {
+    font-family: "Bangers", cursive;
+    font-size: 3rem;
+    margin: 2rem;
+  }
+  .info__item {
+    display: flex;
+    justify-content: space-around;
+  }
+  .info__item--desc {
+    margin: 4rem;
+    padding: 5rem;
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 2rem;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+  }
+  .info__item__detail {
+    margin: 5rem;
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  .conclu {
+    // color: $presentation-bg-color;
+    margin: 4rem;
+    text-align: center;
+  }
+}
