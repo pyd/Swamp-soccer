@@ -1,11 +1,10 @@
 import React from 'react';
 
-import HistoireContenu from '../components/HistoireContenu';
-
 const Histoire = () => {
     return (
         <div className= 'general_histoire'>
             <h3 className='histoire_titre'>HISTOIRE</h3>
+
 
             <div className='histoire_main_container'>
                 <figure className='histoire_figure'>
@@ -15,6 +14,7 @@ const Histoire = () => {
                 <div className='histoire__descript'>
                     <h3 className='descript_titre1'>Le « swamp soccer » : un sport bien boueux </h3>
                     <p className='histoire_contenu'>Si certains évitent de tacheter leurs maillots de football, d’autres préfèrent se
+
                         jeter dans de la boue… Découvrons le « swamp soccer ».
                         Le « swamp soccer » ou « foot de boue » est une sorte de dérivée du football traditionnel
                         qui se jouedans la boue. Mais pourquoi se jetterait-on exprès dans
@@ -28,8 +28,10 @@ const Histoire = () => {
                         Même si les règles de sport peuvent paraître un peu barbares, on y trouve tout de même un peu d’humanité
                         À la fin d’un match de swamp soccer, la tradition veut que les joueurs se jettent dans de l’eau glacée. De cette
                         manière, les Finlandais expriment : « après l’effort, le réconfort ». 
+
                     </p>
                 </div>
+
             </div><br />
             <div className='histoire_galerie'>
                 <div>
@@ -39,6 +41,7 @@ const Histoire = () => {
                 <div className='histoire_photo'>
                     <div className='galerie_photo'>
                         <a> <img className='image' src='./img/foot2.jpg' alt='foot2' />
+
                             <p className='spa'>Une photo d'équipe du swamp soccer prise en 2018 lors d'un match</p> </a>
                     </div>
                     <div className='galerie_photo'>
@@ -56,6 +59,7 @@ const Histoire = () => {
                     <div className='galerie_photo'>
                         <a> <img className='image' src='./img/f.webp' alt='foot6' />
                             <p className='spa'>Une photo d'équipe du swamp soccer prise en 2021 lors d'un match</p></a>
+
                     </div>
                 </div>
             </div>
