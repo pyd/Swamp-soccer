@@ -19,7 +19,7 @@ $after-left-pos-pourcentage: 40%;
     max-width: 80%;
   }
 
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 1070px) {
     @include flex-modulable(column, null, start, 3rem);
     padding-inline: 5rem;
     max-width: 75%;
@@ -43,7 +43,7 @@ $after-left-pos-pourcentage: 40%;
     @include flex-modulable(row, center, null, 4rem);
     flex-wrap: wrap;
   }
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 1070px) {
     @include flex-modulable(row, start, null, 4rem);
     flex-wrap: wrap;
   }
