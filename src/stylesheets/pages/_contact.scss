@@ -138,11 +138,10 @@
         .contact__container__form {
             width: 100%;
             max-width: 50rem;
-            // height: 40rem;
             background-color: #fff;
             border-radius: .5rem;
             box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
-            // z-index: 1000;
+            z-index: 1000;
             overflow: hidden;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -169,25 +168,25 @@
 
                 form {
                     padding: 2.3rem 2.2rem;
-                    // z-index: 10;
+                    z-index: 10;
                     overflow: hidden;
                     position: relative;
 
-                    .contact__form--title{
+                    .contact__form--title {
                         color: $nagivation-bg-color;
                         font-weight: 500;
                         font-size: $font-size-subtitle;
                         font-family: $font-title;
-                        letter-spacing:.1rem;
+                        letter-spacing: .1rem;
                         line-height: 1;
                         margin-bottom: 0.7rem;
                     }
 
-                    .contact__form--input-container{
+                    .contact__form--input-container {
                         position: relative;
                         margin: 1rem 0;
 
-                        label{
+                        label {
                             position: absolute;
                             top: 50%;
                             left: 15px;
@@ -197,9 +196,11 @@
                             font-weight: 500;
                             pointer-events: none;
                             transition: 0.5s;
+                            
                         }
 
-                        input, textarea{
+                        input,
+                        textarea {
                             width: 100%;
                             outline: none;
                             border: .2rem solid $nagivation-bg-color;
@@ -213,48 +214,61 @@
                             transition: .3s;
                         }
 
-                        textarea.input{
+                        textarea.input {
                             min-height: 15rem;
                             resize: none;
                             overflow-y: auto;
 
-       
+
                         }
 
-                        label{
+                        label {
                             top: 1rem;
                             transform: translateY(0);
+                            
                         }
 
-                        span{
-                           position: absolute;
-                           top: 0; 
-                           left: 1rem;
-                           transform: translateY(-50%);
-                           font-size: $font-size-standart;
-                           padding: 0 0.4rem;
-                           color: transparent;
-                           pointer-events: none;
-                           z-index: 500;
+                        span {
+                            position: absolute;
+                            top: 0;
+                            left: 1rem;
+                            transform: translateY(-50%);
+                            font-size: $font-size-standart;
+                            padding: 0 0.4rem;
+                            color: transparent;
+                            pointer-events: none;
+                            z-index: 500;
+                            //    background: red;
 
-                           &::before, &::after{
-                               content: "";
-                               position: absolute;
-                               width: 10%;
-                            //    opacity: 0;
-                               transition: 0.3s;
-                            //    height: 7px;
-                               background-color: #ff8f00;
-                               top: 50%;
-                               transform: translateY(-50%);
-                           }
+                            &::before,
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                width: 10%;
+                                opacity: 0;
+                                transition: 0.3s;
+                                height: 8px;
+                                background-color: #ff8f00;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+
+                            &::before {
+                                left: 50%;
+                            }
+
+                            &::after {
+                                right: 50%;
+                            }
 
                         }
-                        
+
+
+
 
                     }
 
-                    .btn{
+                    .btn {
                         padding: .6rem 1.3rem;
                         background-color: #24252a;
                         border: 2px solid #24252a;
@@ -266,16 +280,31 @@
                         cursor: pointer;
                         transition: .3s;
 
-                        &:hover{
+                        &:hover {
                             background-color: transparent;
                             color: #24252a;
                         }
                     }
-                    
+
+                    .focus{
+                        label{
+                            top: 0;
+                            transform: translateY(-50%);
+                            left: 25px;
+                            font-size: .8rem;
+                        }
+
+                        span::before, span::after{
+                            width: 50%;
+                            opacity: 1;
+                        }
+                    }
+
+
+   
 
 
 
-            
                 }
 
             }
