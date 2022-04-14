@@ -24,28 +24,37 @@ const Navigation = () => {
                 </NavLink>
             </h2>
             <nav>
-                <ul className="nav__links">
-                    <li>
-                        <NavLink to="/Infos" className={(nav) => (nav.isActive ? "nav-active" : "")}>
-                        Nos infos
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/Members" className={(nav) => (nav.isActive ? "nav-active" : "")}>
-                        Nos membres
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/Histoire" className={(nav) => (nav.isActive ? "nav-active" : "")}>
-                        Notre histoire
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/contact" className={(nav) => (nav.isActive ? "nav-active" : "")}>
-                        Contact
-                        </NavLink>
-                    </li>
-                </ul>
+
+                {/* if toggleMenu is false, then it return anything */}
+                {toggleMenu && (
+
+                    <ul className="nav__links">
+                        <li>
+                            <NavLink to="/Infos">
+                                Nos infos
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/Members">
+                                Nos membres
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/Histoire">
+                                Notre histoire
+                            </NavLink>
+                        </li>
+                        <li>
+                            <button>
+                                <NavLink to="/Contact">
+                                    Contact
+                                </NavLink>
+                            </button>
+                        </li>
+                    </ul>
+
+                )}
+
             </nav>
             <div className="nav__toggle"
                 onClick={toggleNavSmallScreen}
