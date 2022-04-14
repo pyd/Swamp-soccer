@@ -44,7 +44,7 @@ function Members() {
         <div className="member__cards-container">{attackArrayList}</div>
       </section>
       <section className="member__position-container defense">
-        <h2 className="member__categorie-h2">La Defence</h2>
+        <h2 className="member__categorie-h2">La Defense</h2>
         <div className="member__cards-container">{defenseArrayList}</div>
       </section>
     </div>
