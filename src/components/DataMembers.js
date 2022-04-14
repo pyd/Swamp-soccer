@@ -4,7 +4,7 @@ const MembersData = [
         name: 'Roger',
         LastName: 'Cadri',
         role: 'President',
-        position: 'Goalkeeper',
+        position: 'Gardien',
         age: 45,
 
         stats: {
@@ -24,7 +24,7 @@ const MembersData = [
         name: 'Marselle',
         LastName: 'Delasalle',
         role: 'Tresorier',
-        position: 'Full Back',
+        position: 'Arriere Gauche',
         age: 38,
 
         stats: {
@@ -44,7 +44,7 @@ const MembersData = [
         name: 'Stephen',
         LastName: 'Bjorcktruc',
         role: 'Assemblé Générale',
-        position: 'Center Back',
+        position: 'Avant Centre',
         age: 47,
 
         stats: {
@@ -64,7 +64,7 @@ const MembersData = [
         name: 'Christophe',
         LastName: 'Renekae',
         role: 'Secretaire',
-        position: 'Central Midfielder',
+        position: 'Milieu Central',
         age: 45,
 
         stats: {
@@ -84,7 +84,7 @@ const MembersData = [
         name: 'Pauline',
         LastName: 'Merlin',
         role: 'Conseil d\'administration',
-        position: "Defensive Midfielder",
+        position: "Défenseur Central",
         age: 25,
 
         stats: {
@@ -104,7 +104,7 @@ const MembersData = [
         name: 'Paul',
         LastName: 'Legrand',
         role: 'Membre du Bureau',
-        position: 'Winger',
+        position: 'Aillier',
         age: 23,
 
         stats: {
