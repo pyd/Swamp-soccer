@@ -46,14 +46,16 @@ const Navigation = () => {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/contact">
-                                Contact
-                            </NavLink>
+                            <button>
+                                <NavLink to="/Contact">
+                                    Contact
+                                </NavLink>
+                            </button>
                         </li>
                     </ul>
 
                 )}
-                
+
             </nav>
             <div className="nav__toggle"
                 onClick={toggleNavSmallScreen}
