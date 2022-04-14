@@ -1,6 +1,8 @@
 $playercard-font-size: 0.8rem;
 $playercard-font-size-stats: 1rem;
 
+$playercard-border-radius: 0.4rem;
+
 $playercard-color-font: white;
 
 $playercard-color-back-background: rgb(44, 50, 66);
@@ -11,10 +13,9 @@ $playercard-text-translateZ: 10px;
 
 $playercard-transform-time: 0.5s;
 
-$playercard-general-box-shadow: 12px 12px 30px rgba(128, 128, 128, 0.519);
-$playercard-box-shadow-sticker-back: 12px 12px 30px rgba(0, 0, 0, 0.519);
+$playercard-general-box-shadow: 20px 20px 40px rgba(68, 67, 67, 0.621);
 
-$playercard-back-margin-general: 3.2rem;
+$playercard-back-margin-general: 4rem;
 
 $playercard-back-line-height: 5rem;
 $playercard-back-line-bottom-pos: -17px;
@@ -27,6 +28,10 @@ $playercard-back-line-width: 0.1rem;
   position: absolute;
   // margin: 10rem;
   color: $playercard-color-font;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 // -------------------------------------------
@@ -49,7 +54,8 @@ $playercard-back-line-width: 0.1rem;
   width: 100%;
   height: 100%;
 
-  // ----------------  ----------------  ----------------  ----------------  ----------------  ----------------
+  border-radius: $playercard-border-radius;
+
   backface-visibility: hidden;
 
   transform-style: preserve-3d;
@@ -66,6 +72,7 @@ $playercard-back-line-width: 0.1rem;
   figure {
     img {
       aspect-ratio: $playercard-aspect-ratio;
+      border-radius: $playercard-border-radius;
     }
   }
   //________
@@ -87,6 +94,7 @@ $playercard-back-line-width: 0.1rem;
   height: 100%;
 
   box-shadow: $playercard-general-box-shadow;
+  border-radius: $playercard-border-radius;
 
   backface-visibility: hidden;
 
@@ -97,65 +105,6 @@ $playercard-back-line-width: 0.1rem;
     transform: translateZ($playercard-text-translateZ);
     backface-visibility: hidden;
   }
-}
-
-// -------------------------------------------
-// STICKER
-// -------------------------------------------
-$playercard-sticker-pos: -5%;
-$playercard-sticker-size: 3rem;
-$playercard-sticker-color: rgb(23, 35, 142);
-
-.card__front::after {
-  content: "";
-  position: absolute;
-  background-color: $playercard-sticker-color;
-  width: $playercard-sticker-size;
-  height: $playercard-sticker-size;
-  top: $playercard-sticker-pos;
-  right: $playercard-sticker-pos;
-
-  box-shadow: $playercard-general-box-shadow;
-}
-
-.card__back::before {
-  content: "";
-  position: absolute;
-  background-color: $playercard-sticker-color;
-  width: $playercard-sticker-size;
-  height: $playercard-sticker-size;
-  top: $playercard-sticker-pos;
-  left: $playercard-sticker-pos;
-
-  box-shadow: $playercard-box-shadow-sticker-back;
-}
-
-// -------------------------------------------
-// ROTATION
-// -------------------------------------------
-
-.card-container {
-  &:hover {
-    .card__front {
-      transform: rotateY(-180deg);
-      // transform: rotateY(-180deg) rotateZ(15deg);
-    }
-    .card__back {
-      transform: rotateY(0deg);
-    }
-  }
-}
-
-.card__front {
-  transform: rotateY(0deg);
-  transition: transform $playercard-transform-time;
-
-}
-
-.card__back {
-  transform: rotateY(180deg);
-  // transform: rotateY(180deg) rotateZ(-15deg);
-  transition: transform $playercard-transform-time;
 }
 
 // ============  ============  ============  ============  ============  ============  ============
@@ -178,7 +127,9 @@ $playercard-sticker-color: rgb(23, 35, 142);
     transform: rotateZ(-90deg);
     transform-origin: left;
 
-    font-size: calc($playercard-font-size * 2);
+    font-size: calc($playercard-font-size * 2.4);
+    font-family: $font-title;
+    letter-spacing: 0.2rem;
     text-transform: uppercase;
     text-shadow: 3px 3px 10px rgb(25, 25, 25);
   }
@@ -198,13 +149,15 @@ $playercard-sticker-color: rgb(23, 35, 142);
 
   .card__back-name {
     margin-inline-start: $playercard-back-margin-general;
-    margin-block-start: 1.5rem;
+    margin-block-start: 1rem;
     h3 {
-      font-size: calc($playercard-font-size * 2.3);
+      font-size: calc($playercard-font-size * 1.8);
+      font-family: $font-title2;
     }
     h2 {
-      font-size: calc($playercard-font-size * 3);
+      font-size: calc($playercard-font-size * 2.4);
       position: relative;
+      font-family: $font-title2;
 
       // top left corner lines
       &:after {
@@ -213,8 +166,8 @@ $playercard-sticker-color: rgb(23, 35, 142);
         width: 20%;
         height: $playercard-back-line-width;
         background-color: white;
-        bottom: 0;
-        left: -20px;
+        bottom: -0.5rem;
+        left: -35px;
       }
       &:before {
         position: absolute;
@@ -222,14 +175,15 @@ $playercard-sticker-color: rgb(23, 35, 142);
         width: $playercard-back-line-width;
         height: $playercard-back-line-height;
         background-color: white;
-        bottom: -5rem;
-        left: -20px;
+        bottom: -5.5rem;
+        left: -35px;
       }
     }
   }
 
   .card__back-infolist {
     margin-block-start: calc($playercard-back-margin-general / 3);
+    font-family: $font-text;
 
     .card__back-infolist-flex {
       max-width: 80%;
@@ -244,22 +198,27 @@ $playercard-sticker-color: rgb(23, 35, 142);
       }
 
       li:nth-of-type(1) {
-        font-size: calc($playercard-font-size * 1.6);
+        font-size: calc($playercard-font-size * 1.5);
+        font-family: $font-title2;
+        font-weight: bold;
       }
 
       li:nth-of-type(2) {
         font-size: calc($playercard-font-size * 1.3);
       }
       li:nth-of-type(3) {
-        font-size: calc($playercard-font-size * 1.3);
+        font-size: calc($playercard-font-size * 1.2);
         margin-block-end: 0.5rem;
         display: flex;
         gap: 0.3rem;
       }
 
       li:nth-of-type(4) {
-        font-size: calc($playercard-font-size * 1.2);
+        font-size: calc($playercard-font-size * 1.1);
         margin-inline-end: 1.2rem;
+        line-height: 1.4rem;
+        max-height: 8rem;
+        overflow-y: auto;
 
         // bottom right corner lines
         &:after {
@@ -283,4 +242,61 @@ $playercard-sticker-color: rgb(23, 35, 142);
       }
     }
   }
+}
+// ============  ============  ============  ============  ============  ============  ============
+// ============  ============  ============  ============  ============  ============  ============
+// ============  ============  ============  ============  ============  ============  ============
+// -------------------------------------------
+// ROTATION
+// -------------------------------------------
+
+
+.js-rotation {
+  .card__front {
+    transform: rotateY(-180deg);
+    // transform: rotateY(-180deg) rotateZ(15deg);
+  }
+  .card__back {
+    transform: rotateY(0deg);
+  }
+}
+
+.card__front {
+  transform: rotateY(0deg);
+  transition: transform $playercard-transform-time;
+}
+
+.card__back {
+  transform: rotateY(180deg);
+  // transform: rotateY(180deg) rotateZ(-15deg);
+  transition: transform $playercard-transform-time;
+}
+
+// -------------------------------------------
+// STICKER
+// -------------------------------------------
+
+$playercard-sticker-pos: 0.2%;
+$playercard-sticker-size: 5rem;
+$playercard-sticker-color: rgb(23, 35, 142);
+
+.card-icon {
+  position: absolute;
+  font-size: 3rem;
+  top: $playercard-sticker-pos;
+  right: $playercard-sticker-pos;
+}
+
+.icon-front {
+  color: black;
+  top: $playercard-sticker-pos;
+  right: $playercard-sticker-pos;
+  transform: scaleX(-1);
+}
+.icon-back {
+  color: white;
+  top: $playercard-sticker-pos;
+  left: $playercard-sticker-pos;
+
+  backface-visibility: hidden;
 }

@@ -1,31 +1,68 @@
+$after-left-pos-pourcentage: 40%;
 
-[class^="member__position-container-"] {
-  margin: 8rem auto;
-  max-width: 70%;
+// [class^="member__position-container-"] {
+//   margin-inline: auto;
+//   padding-block: 8rem;
+//   max-width: 95%;
+//   @include flex-modulable(column, null, start, 3rem);
+// }
+
+.member__position-container {
+  margin-inline: auto;
+  margin-block: 6rem;
+  padding-block: 2rem;
+  max-width: 80%;
+
   @include flex-modulable(column, null, center, 3rem);
-  position: relative;
 
-  &::after {
-    content:"";
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    z-index: -1;
-
-    width: 20rem;
-    height: 90%;
-    background-color: rgb(85, 112, 138);
+  @media only screen and (min-width: 1024px) {
+    @include flex-modulable(column, null, start, 3rem);
+    padding-inline: 20rem;
   }
+}
 
+.goal {
+  background-color: rgb(183, 179, 179);
+}
+.attack {
+  background-color: #d77a00;
+}
+.defense {
+  background-color: rgb(68, 67, 67);
 }
 
 .member__cards-container {
-  @include flex-modulable(column, null, center, 3rem);
+  @include flex-modulable(column, null, center, 4rem);
+
+  @media only screen and (min-width: 880px) {
+    @include flex-modulable(row, center, null, 4rem);
+    flex-wrap: wrap;
+  }
 }
 
-
 .member__categorie-h2 {
-  font-size: 2rem;
+  isolation: isolate;
+  position: relative;
+
+  font-family: $font-title;
+  font-size: 4rem;
   font-weight: bold;
   text-transform: uppercase;
+  letter-spacing: 0.3rem;
+
+  color: white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-color: $first-color;
+    width: 100%;
+    height: 45%;
+    bottom: 0;
+    left: 2%;
+
+    border-left: 5px solid black;
+    border-bottom: 5px solid black;
+  }
 }

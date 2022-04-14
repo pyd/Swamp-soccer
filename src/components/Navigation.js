@@ -29,27 +29,26 @@ const Navigation = () => {
                 {toggleMenu && (
 
                     <ul className="nav__links">
+
                         <li>
-                            <NavLink to="/Infos">
+                            <NavLink to="/infos">
                                 Nos infos
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/Members">
+                            <NavLink to="/members">
                                 Nos membres
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/Histoire">
+                            <NavLink to="/histoire">
                                 Notre histoire
                             </NavLink>
                         </li>
                         <li>
-                            <button>
-                                <NavLink to="/Contact">
-                                    Contact
-                                </NavLink>
-                            </button>
+                            <NavLink to="/contact">
+                                Contact
+                            </NavLink>
                         </li>
                     </ul>
 
