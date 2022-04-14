@@ -14,19 +14,19 @@ function Members() {
   }
   // -------------------------------------------------------------
   const goalkeeperArray = MembersData.filter(function (position) {
-    return position.position === "Goalkeeper";
+    return position.position === "Gardien";
   });
   const goalKeeperList = arrayMapOn(MemberCard, goalkeeperArray);
 
   // -------------------------------------------------------------
   const attackArray = MembersData.filter(function (position) {
-    return position.position.includes("Central") || position.position.includes("Winger");
+    return position.position.includes("Milieu") || position.position.includes("Centre") || position.position.includes("Aillier");
   });
   const attackArrayList = arrayMapOn(MemberCard, attackArray);
 
   // -------------------------------------------------------------
   const defenseArray = MembersData.filter(function (position) {
-    return position.position.includes("Back") || position.position.includes("Defensive");
+    return position.position.includes("Arriere") || position.position.includes("Défenseur");
   });
   const defenseArrayList = arrayMapOn(MemberCard, defenseArray);
 

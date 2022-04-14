@@ -4,12 +4,11 @@
 
 /// Regular font family
 /// @type List
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-stack: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
-
+$code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Monaco", monospace !default;
 
 /// Copy text color
 /// @type Color
@@ -31,7 +30,6 @@ $mid-grey: rgb(153, 153, 153) !default;
 /// @type Color
 $dark-grey: rgb(68, 68, 68) !default;
 
-
 /// Container's maximum width
 /// @type Length
 $max-width: 1180px !default;
@@ -40,25 +38,28 @@ $max-width: 1180px !default;
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
+  "small": 320px,
+  "medium": 768px,
+  "large": 1024px,
 ) !default;
 
 /// Relative or absolute URL where all assets are served from
 /// @type String
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
-$base-url: '/assets/' !default;
-
+$base-url: "/assets/" !default;
 
 // ============ ============ ============ ============ ============ ============ ============ ============
 
 /// VARIABLES PROJECT
 
+// font
+$font-text: "Montserrat", sans-serif;
+$font-title: "Bangers", cursive;
+$font-title2: "Rampart One", cursive;
+
 /// Breakpoints
 $medium-screen: 768px;
-
 
 /// Font-size
 $font-size-title: 6rem;
@@ -66,41 +67,57 @@ $font-size-mobile-title: 3rem;
 $font-size-subtitle: 2rem;
 $font-size-mobile-subtitle: 1rem;
 $font-size-standart: 1rem;
-$font-size-mobile-standart: .8rem;
+$font-size-mobile-standart: 0.8rem;
 
 /// Navigation
-$nagivation-bg-color: #24252A;
+$nagivation-bg-color: #24252a;
 $nagivation-mobile-bg-color: #1c1d20;
 $nagivation-link-color: #edf0f1;
-$nagivation-link-color-hover: #FF8F00;
-$nagivation-bg-btn-color: #FF8F00;
+$nagivation-link-color-hover: #ff8f00;
+$nagivation-bg-btn-color: #ff8f00;
 $nagivation-bg-btn-color-hover: rgb(194, 126, 2);
 
 /// Main colors
-$first-color : #FF8F00;
-$secondary-color : #24252A;
+$first-color: #ff8f00;
+$secondary-color: #24252a;
 
 /// Hero
-$hero-title-color : #ffffff;
-$hero-btn-text-color : #ffffff;
+$hero-title-color: #ffffff;
+$hero-btn-text-color: #ffffff;
 
 /// Presentation
-$presentation-bg-color: #FF8F00;
-$presentation-text-color: #24252A;
+$presentation-bg-color: #ff8f00;
+$presentation-text-color: #24252a;
 $presentation-span-text-color: #ffffff;
 
 /// Stat
 $stat-bg-color: rgb(0, 0, 0);
-$stat-label-bg-color : $stat-bg-color;
-$stat-text-label-color : $first-color;
-$stat-text-number-color : $first-color;
-$stat-text-color : #ff910076;
-
+$stat-label-bg-color: $stat-bg-color;
+$stat-text-label-color: $first-color;
+$stat-text-number-color: $first-color;
+$stat-text-color: #ff910076;
 
 /// Partnership
 $partnership-bg-color: #fff3f3;
 $partnership-box-shadow-color: rgba(0, 0, 0, 0.2);
 
+// Member Card
+$playercard-font-size: 0.8rem;
+$playercard-font-size-stats: 1rem;
 
+$playercard-border-radius: 0.4rem;
 
+$playercard-color-font: white;
+$playercard-color-back-background: rgb(44, 50, 66);
 
+$playercard-container-width: 18rem;
+$playercard-aspect-ratio: 1 / 1.4;
+$playercard-text-translateZ: 10px;
+$playercard-transform-time: 0.5s;
+$playercard-general-box-shadow: 20px 20px 10px rgba(15, 9, 9, 0.366);
+
+$playercard-back-margin-general: 4rem;
+$playercard-back-line-height: 5rem;
+$playercard-back-line-bottom-pos: -17px;
+$playercard-back-line-right-pos: 1.8rem;
+$playercard-back-line-width: 0.1rem;
