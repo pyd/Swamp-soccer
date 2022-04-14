@@ -14,19 +14,19 @@ function Members() {
   }
   // -------------------------------------------------------------
   const goalkeeperArray = MembersData.filter(function (position) {
-    return position.position === "Goalkeeper";
+    return position.position === "Gardien";
   });
   const goalKeeperList = arrayMapOn(MemberCard, goalkeeperArray);
 
   // -------------------------------------------------------------
   const attackArray = MembersData.filter(function (position) {
-    return position.position.includes("Central") || position.position.includes("Winger");
+    return position.position.includes("Milieu") || position.position.includes("Centre") || position.position.includes("Aillier");
   });
   const attackArrayList = arrayMapOn(MemberCard, attackArray);
 
   // -------------------------------------------------------------
   const defenseArray = MembersData.filter(function (position) {
-    return position.position.includes("Back") || position.position.includes("Defensive");
+    return position.position.includes("Arriere") || position.position.includes("Défenseur");
   });
   const defenseArrayList = arrayMapOn(MemberCard, defenseArray);
 
@@ -44,7 +44,7 @@ function Members() {
         <div className="member__cards-container">{attackArrayList}</div>
       </section>
       <section className="member__position-container defense">
-        <h2 className="member__categorie-h2">La Defence</h2>
+        <h2 className="member__categorie-h2">La Defense</h2>
         <div className="member__cards-container">{defenseArrayList}</div>
       </section>
     </div>

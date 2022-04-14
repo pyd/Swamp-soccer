@@ -37,11 +37,11 @@ function MemberCard(props) {
         <article className="card__front-text">
           <h2 className="card__front-position">{props.cardparam.position}</h2>
           <ul className="card__front-stats">
-            <MemberCardStat actionName="Saved" actionValue={props.cardparam.stats.shootSaved} />
+            <MemberCardStat actionName="Sauvé" actionValue={props.cardparam.stats.shootSaved} />
             <MemberCardStat actionName="Dribble" actionValue={props.cardparam.stats.dribbling} />
-            <MemberCardStat actionName="Tackle" actionValue={props.cardparam.stats.tackling} />
-            <MemberCardStat actionName="Assist" actionValue={props.cardparam.stats.assist} />
-            <MemberCardStat actionName="Goal" actionValue={props.cardparam.stats.goal} />
+            <MemberCardStat actionName="Tacle" actionValue={props.cardparam.stats.tackling} />
+            <MemberCardStat actionName="Assiste" actionValue={props.cardparam.stats.assist} />
+            <MemberCardStat actionName="But" actionValue={props.cardparam.stats.goal} />
           </ul>
         </article>
       </article>
@@ -58,11 +58,11 @@ function MemberCard(props) {
         <div className="card__back-infolist">
           <ul className="card__back-infolist-flex">
             <li>{props.cardparam.role}</li>
-            <li>{props.cardparam.age} yo</li>
+            <li>{props.cardparam.age} ans</li>
             <li>
-              <div>Member since</div>
+              <div>Membre depuis</div>
               <div>:</div>
-              <div>{props.cardparam.memberSince} years</div>
+              <div>{props.cardparam.memberSince} ans</div>
             </li>
             <li>{props.cardparam.aboutMe}</li>
           </ul>
