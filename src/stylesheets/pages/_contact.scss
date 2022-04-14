@@ -1,125 +1,284 @@
 // CSS for Contact component
 
-main.contact {
+// main.contact {
 
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 3% 0;
-    }
-    
-    h1 {
-        font-family: "Bangers", cursive;
-        font-size: 3rem;
-        margin: 2rem;
-    }
-    
-    .us, .form-container {
-        width: 70%;
-        margin: 0 auto;
-        padding: 20px;
-        border-radius: 6px;
-        border: 1px solid lightgray;
-    }
+//     .container {
+//         max-width: 1200px;
+//         margin: 0 auto;
+//         padding: 3% 0;
+//     }
 
-    .us {
+//     h1 {
+//         font-family: "Bangers", cursive;
+//         font-size: 3rem;
+//         margin: 2rem;
+//     }
+
+//     .us, .form-container {
+//         width: 70%;
+//         margin: 0 auto;
+//         padding: 20px;
+//         border-radius: 6px;
+//         border: 1px solid lightgray;
+//     }
+
+//     .us {
+//         display: flex;
+//         justify-content: space-around;
+//         flex-wrap: wrap;
+//         gap: 20px;
+
+//         > * {
+//             box-shadow: 2px 2px 3px 1px lightgray;;
+//         }
+
+//         .coordonates {
+//             width: 300px;
+//             padding: 10px;
+//             font-size: 1rem;
+//             border-radius: 6px;
+//             background-color: black;
+//             color: #fff;
+//         }
+
+//         img {
+//             border-radius: 5px;
+//             width: 300px;
+//         }
+//     }
+
+//     h2 {
+//         padding: 4px 30px;
+//         margin-bottom: 20px;
+//         font-style: italic;
+//         color: rgb(201, 197, 178);
+//         background-color: rgb(79, 74, 46, .8);
+//         border-radius: 4px;
+//     }
+
+//     .form-container {
+
+//         margin-top: 20px;
+//         background: no-repeat url('../../public/img/mud-raccoon.jpg');
+//         background-size: cover;
+//         background-position: 0 -50px;
+
+//         form {
+//             padding: 0 13%;
+//             font-size: 1rem;
+
+//             .row input, textarea {
+//                 border-radius: 4px;
+//                 border: none;
+//                 text-indent: 10px;
+//                 opacity: .9;
+//             }
+
+//             .row {
+//                 display: flex;
+//                 flex-direction: row;
+//                 flex-wrap: wrap;
+//                 gap: 2rem;
+
+//                 input {
+//                     flex-grow: 1;
+//                     line-height: 30px;
+//                 }
+//             }
+
+//             textarea {
+//                 width: 100%;
+//                 min-height: 80px;
+//                 margin-top: 30px;
+//             }
+
+//             .buttons {
+
+//                 .swarm-btn {
+//                     margin-top: 20px;
+//                     padding: 0 6px;
+//                     line-height: 30px;
+//                     border-radius: 4px;
+//                     border: none;
+//                     background-color: rgb(79, 74, 46, .8);
+//                     color: white;
+
+//                     .icon {
+//                         font-size: 30px;
+//                     }
+//                 }
+//                 .swarm-btn:hover {
+//                     cursor: pointer;
+//                 }
+//             }
+//         }
+
+//     }
+// }
+
+// @media screen and (max-width: 660px) {
+
+//     main.contact h1, main.contact h2 {
+//         padding: 0;
+//         text-align: center;
+//     }
+// }
+
+.contact {
+    .contact__container {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        padding: 2rem;
+        overflow: hidden;
         display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        gap: 20px;
+        align-items: center;
+        justify-content: center;
 
-        > * {
-            box-shadow: 2px 2px 3px 1px lightgray;;
-        }
+        .contact__container__form {
+            width: 100%;
+            max-width: 50rem;
+            // height: 40rem;
+            background-color: #fff;
+            border-radius: .5rem;
+            box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+            // z-index: 1000;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
 
-        .coordonates {
-            width: 300px;
-            padding: 10px;
-            font-size: 1rem;
-            border-radius: 6px;
-            background-color: black;
-            color: #fff;
-        }
-
-        img {
-            border-radius: 5px;
-            width: 300px;
-        }
-    }
-
-    h2 {
-        padding: 4px 30px;
-        margin-bottom: 20px;
-        font-style: italic;
-        color: rgb(201, 197, 178);
-        background-color: rgb(79, 74, 46, .8);
-        border-radius: 4px;
-    }
-
-    .form-container {
-
-        margin-top: 20px;
-        background: no-repeat url('../../public/img/mud-raccoon.jpg');
-        background-size: cover;
-        background-position: 0 -50px;
-
-        form {
-            padding: 0 13%;
-            font-size: 1rem;
-
-            .row input, textarea {
-                border-radius: 4px;
-                border: none;
-                text-indent: 10px;
-                opacity: .9;
+            .contact__container__form--info {
+                background-color: $secondary-color;
             }
 
-            .row {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                gap: 2rem;
+            .contact__container__form--form {
+                background: $first-color;
+                position: relative;
 
-                input {
-                    flex-grow: 1;
-                    line-height: 30px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 2rem;
+                    height: 2rem;
+                    background-color: $first-color;
+                    transform: rotate(45deg);
+                    top: 5rem;
+                    left: -1rem;
+
                 }
-            }
-            
-            textarea {
-                width: 100%;
-                min-height: 80px;
-                margin-top: 30px;
-            }
 
-            .buttons {
+                form {
+                    padding: 2.3rem 2.2rem;
+                    // z-index: 10;
+                    overflow: hidden;
+                    position: relative;
 
-                .swarm-btn {
-                    margin-top: 20px;
-                    padding: 0 6px;
-                    line-height: 30px;
-                    border-radius: 4px;
-                    border: none;
-                    background-color: rgb(79, 74, 46, .8);
-                    color: white;
-
-                    .icon {
-                        font-size: 30px;
+                    .contact__form--title{
+                        color: $nagivation-bg-color;
+                        font-weight: 500;
+                        font-size: $font-size-subtitle;
+                        font-family: $font-title;
+                        letter-spacing:.1rem;
+                        line-height: 1;
+                        margin-bottom: 0.7rem;
                     }
+
+                    .contact__form--input-container{
+                        position: relative;
+                        margin: 1rem 0;
+
+                        label{
+                            position: absolute;
+                            top: 50%;
+                            left: 15px;
+                            transform: translateY(-50%);
+                            padding: 0 0.4rem;
+                            color: $nagivation-bg-color;
+                            font-weight: 500;
+                            pointer-events: none;
+                            transition: 0.5s;
+                        }
+
+                        input, textarea{
+                            width: 100%;
+                            outline: none;
+                            border: .2rem solid $nagivation-bg-color;
+                            background: none;
+                            padding: 0.6rem 1.2rem;
+                            color: $nagivation-bg-color;
+                            font-weight: 500;
+                            font-size: $font-size-standart;
+                            letter-spacing: .1rem;
+                            border-radius: .5rem;
+                            transition: .3s;
+                        }
+
+                        textarea.input{
+                            min-height: 15rem;
+                            resize: none;
+                            overflow-y: auto;
+
+       
+                        }
+
+                        label{
+                            top: 1rem;
+                            transform: translateY(0);
+                        }
+
+                        span{
+                           position: absolute;
+                           top: 0; 
+                           left: 1rem;
+                           transform: translateY(-50%);
+                           font-size: $font-size-standart;
+                           padding: 0 0.4rem;
+                           color: transparent;
+                           pointer-events: none;
+                           z-index: 500;
+
+                           &::before, &::after{
+                               content: "";
+                               position: absolute;
+                               width: 10%;
+                            //    opacity: 0;
+                               transition: 0.3s;
+                            //    height: 7px;
+                               background-color: #ff8f00;
+                               top: 50%;
+                               transform: translateY(-50%);
+                           }
+
+                        }
+                        
+
+                    }
+
+                    .btn{
+                        padding: .6rem 1.3rem;
+                        background-color: #24252a;
+                        border: 2px solid #24252a;
+                        font-size: $font-size-standart;
+                        color: #ff8f00;
+                        line-height: 1;
+                        border-radius: 2rem;
+                        outline: none;
+                        cursor: pointer;
+                        transition: .3s;
+
+                        &:hover{
+                            background-color: transparent;
+                            color: #24252a;
+                        }
+                    }
+                    
+
+
+
+            
                 }
-                .swarm-btn:hover {
-                    cursor: pointer;
-                }
+
             }
         }
-
-    }
-}
-
-@media screen and (max-width: 660px) {
-    
-    main.contact h1, main.contact h2 {
-        padding: 0;
-        text-align: center;
     }
 }
