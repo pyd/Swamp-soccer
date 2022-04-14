@@ -1,0 +1,117 @@
+.infos {
+    margin: 1rem;
+  
+    .infos--title {
+      font-family: $font-title2;
+      font-size: $font-size-title;
+      letter-spacing: .2rem;
+      text-align: center;
+    }
+  
+    .infos__content {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+  
+      .info__item {
+        flex-basis: 31%;
+        background: $partnership-bg-color;
+        border-radius: 1rem;
+        margin-bottom: 5%;
+        padding: 2rem;
+        margin: 1%;
+        transition: 0.5s;
+  
+        &:hover {
+          box-shadow: 0 0 1.5rem 0 $partnership-box-shadow-color;
+        }
+  
+        .info__item--desc {
+          font-size: $font-size-standart;
+          margin: .1rem;
+        }
+  
+        .info__item--img {
+          width: 100%;
+          border-radius: .5rem;
+          margin: .1rem;
+        }
+      }
+  
+  
+  
+      .info__item__detail {
+        width: 40%;
+        padding: 1%;
+        text-align: center;
+        font-size: $font-size-standart;
+  
+  
+        .info__item__detail--title {
+          font-family: $font-title2;
+          font-size: $font-size-subtitle;
+          letter-spacing: .2rem;
+          background: $nagivation-bg-btn-color;
+          color: $nagivation-bg-color;
+          padding: .5rem;
+          border-radius: .5rem;
+          margin-bottom: 5%;
+  
+        }
+      }
+  
+      .info__item__detail--hours {
+        padding-left: 10%;
+      }
+  
+      .info__item__detail--rules {
+        padding-right: 10%;
+      }
+  
+      .infos--icons{
+        margin-right: .2rem;
+      }
+  
+    }
+  }
+  
+  
+  
+  @media(max-width: $medium-screen) {
+    .infos {
+  
+      .infos--title {
+        font-size: $font-size-mobile-title;
+      }
+  
+  
+      .infos__content {
+        flex-direction: column;
+  
+        .info__item {
+          padding: .5rem;
+  
+          .info__item--desc {
+            font-size: $font-size-mobile-standart;
+            margin-bottom: .5rem;
+          }
+        }
+  
+        .info__item__detail {
+          margin: 3% auto;
+          font-size: $font-size-mobile-standart;
+          padding: 1%;
+          width: 100%;
+  
+          .info__item__detail--title {
+            font-size: $font-size-mobile-subtitle;
+            margin-bottom: 1rem;
+    
+          }
+  
+        }
+  
+      }
+    }
+  }
+  
