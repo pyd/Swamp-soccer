@@ -5,9 +5,9 @@ const Histoire = () => {
         <div className= 'general_histoire'>
             <h3 className='histoire_titre'>HISTOIRE</h3>
             <div className='histoire_descript'>
-                <div className='hitoire_img'>
+                <figure className='hitoire_img'>
                     <img src='./img/foot1.jpg' alt='foot1' />
-                </div>
+                </figure>
                 <di className='histoire__descript'>
                     <h3 className='descript_titre1'>Le « swamp soccer » : un sport bien boueux </h3>
                     <h4 className='histoire_contenu'>Si certains évitent de tacheter leurs maillots de football, d’autres préfèrent se
