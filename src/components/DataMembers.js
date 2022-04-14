@@ -16,7 +16,7 @@ const MembersData = [
         },
         memberSince: 9,
         status: 'online',
-        aboutMe: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt adipisci eaque soluta tempore numquam velit.'
+        aboutMe: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt adipisci eaque soluta tempore numquam velit. '
     },
 
     {
