@@ -1,129 +1,3 @@
-// CSS for Contact component
-
-// main.contact {
-
-//     .container {
-//         max-width: 1200px;
-//         margin: 0 auto;
-//         padding: 3% 0;
-//     }
-
-//     h1 {
-//         font-family: "Bangers", cursive;
-//         font-size: 3rem;
-//         margin: 2rem;
-//     }
-
-//     .us, .form-container {
-//         width: 70%;
-//         margin: 0 auto;
-//         padding: 20px;
-//         border-radius: 6px;
-//         border: 1px solid lightgray;
-//     }
-
-//     .us {
-//         display: flex;
-//         justify-content: space-around;
-//         flex-wrap: wrap;
-//         gap: 20px;
-
-//         > * {
-//             box-shadow: 2px 2px 3px 1px lightgray;;
-//         }
-
-//         .coordonates {
-//             width: 300px;
-//             padding: 10px;
-//             font-size: 1rem;
-//             border-radius: 6px;
-//             background-color: black;
-//             color: #fff;
-//         }
-
-//         img {
-//             border-radius: 5px;
-//             width: 300px;
-//         }
-//     }
-
-//     h2 {
-//         padding: 4px 30px;
-//         margin-bottom: 20px;
-//         font-style: italic;
-//         color: rgb(201, 197, 178);
-//         background-color: rgb(79, 74, 46, .8);
-//         border-radius: 4px;
-//     }
-
-//     .form-container {
-
-//         margin-top: 20px;
-//         background: no-repeat url('../../public/img/mud-raccoon.jpg');
-//         background-size: cover;
-//         background-position: 0 -50px;
-
-//         form {
-//             padding: 0 13%;
-//             font-size: 1rem;
-
-//             .row input, textarea {
-//                 border-radius: 4px;
-//                 border: none;
-//                 text-indent: 10px;
-//                 opacity: .9;
-//             }
-
-//             .row {
-//                 display: flex;
-//                 flex-direction: row;
-//                 flex-wrap: wrap;
-//                 gap: 2rem;
-
-//                 input {
-//                     flex-grow: 1;
-//                     line-height: 30px;
-//                 }
-//             }
-
-//             textarea {
-//                 width: 100%;
-//                 min-height: 80px;
-//                 margin-top: 30px;
-//             }
-
-//             .buttons {
-
-//                 .swarm-btn {
-//                     margin-top: 20px;
-//                     padding: 0 6px;
-//                     line-height: 30px;
-//                     border-radius: 4px;
-//                     border: none;
-//                     background-color: rgb(79, 74, 46, .8);
-//                     color: white;
-
-//                     .icon {
-//                         font-size: 30px;
-//                     }
-//                 }
-//                 .swarm-btn:hover {
-//                     cursor: pointer;
-//                 }
-//             }
-//         }
-
-//     }
-// }
-
-// @media screen and (max-width: 660px) {
-
-//     main.contact h1, main.contact h2 {
-//         padding: 0;
-//         text-align: center;
-//     }
-// }
-
 .contact {
     background: $nagivation-mobile-bg-color;
 
@@ -143,7 +17,6 @@
             background-color: #fff;
             border-radius: .5rem;
             box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
-            // z-index: 1000;
             overflow: hidden;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -367,5 +240,19 @@
            }
        }
     }
+
+}
+
+@media ( max-width: $medium-screen) {
+    .contact .contact__container .contact__container__form {
+        grid-template-columns: 1fr;
+    }
+
+    .contact .contact__container .contact__container__form .contact__container__form--form::before{
+        top: -13px;
+        left: initial;
+        right: 70px;
+    }
+
 
 }

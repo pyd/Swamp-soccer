@@ -1,5 +1,4 @@
-import { FaFeatherAlt } from 'react-icons/fa';
-import React, { useState } from 'react';
+import React from 'react';
 import { FaHome, FaPhoneAlt, FaPaperPlane, FaFacebook, FaTwitter, FaInstagram  } from "react-icons/fa";
 
 function Contact() {
@@ -100,7 +99,7 @@ function Contact() {
 
           <div className="contact__container__form--form">
 
-            <form onSubmit={handleSubmit} action="index.html">
+            <form onSubmit={handleSubmit}>
               <h3 className="contact__form--title">Nous contacter</h3>
 
               <div className="contact__form--input-container focus">
@@ -109,19 +108,19 @@ function Contact() {
                 <span>Nom de l'utilisateur</span>
               </div>
 
-              <div className="contact__form--input-container">
+              <div className="contact__form--input-container focus">
                 <input type="tel" name="phone" className="input"></input>
                 <label for="">Téléphone</label>
                 <span>Téléphone</span>
               </div>
 
-              <div className="contact__form--input-container">
+              <div className="contact__form--input-container focus">
                 <input type="text" name="email" className="input"></input>
                 <label for="">Email</label>
                 <span>Email</span>
               </div>
 
-              <div className="contact__form--input-container textarea">
+              <div className="contact__form--input-container textarea focus">
                 <textarea name="message" className="input"></textarea>
                 <label className="label" for="">Message</label>
                 <span>Message</span>
