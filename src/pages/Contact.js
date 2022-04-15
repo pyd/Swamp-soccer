@@ -1,6 +1,6 @@
 import { FaFeatherAlt } from 'react-icons/fa';
 import React, { useState } from 'react';
-import { FaHome, FaPhoneAlt, FaPaperPlane  } from "react-icons/fa";
+import { FaHome, FaPhoneAlt, FaPaperPlane, FaFacebook, FaTwitter, FaInstagram  } from "react-icons/fa";
 
 function Contact() {
 
@@ -41,61 +41,13 @@ function Contact() {
 
 
   return (
-    // <main className="contact">
-
-    //   <h1>Contactez-nous</h1>
-
-    //   <div className="container">
-
-    //     <div className="us">
-
-    //       <div className="coordonates">
-    //         <div>Phone: +44(0)7774926245</div>
-    //         <div>Address:<br />,<br />
-    //           North Campbell Road,<br />
-    //           Innellan,
-    //           SbArgyll, PA23
-    //           Scotland,
-    //           United Kingdom
-    //         </div>
-    //       </div>
-
-    //       <img src="https://swampsoccer.co.uk/wp-content/uploads/2021/04/2009-Mr-Mrs-Swamp-Soccer.jpg" alt="A picture of us"></img>
-
-    //     </div>
-
-    //     <div className="form-container"> 
-
-    //       < h2>Envoyez-nous un message <FaFeatherAlt /></h2>
-
-    //       <form onSubmit={handleSubmit}>
-
-    //         <div className="row">
-    //           <input id="name" type="text" placeholder="Nom" required />
-    //           <input id="email" type="email" placeholder="Adresse de courriel" required />
-    //         </div>
-
-    //         <textarea id="message" placeholder="Message" required />
-    //         <div className="buttons">
-    //           <button className="swarm-btn">Envoyer</button>
-    //         </div>
-
-    //       </form>
-
-    //     </div>
-
-    //   </div>
-
-    // </main>
-
-    // );
     <div className="contact">
       <div className="contact__container">
         <div className="contact__container__form">
           <div className="contact__container__form--info">
             <h3 className="contact__info--title">Foot 2 boue</h3>
             <p className="contact__info--text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
             </p>
 
             <div className="contact__info__items">
@@ -123,11 +75,32 @@ function Contact() {
               </div>
 
             </div>
+
+            <div className="social-media">
+            <p>Connectez vous à nous : </p>
+            <div className="social-icons">
+
+              <a href="#">
+                <FaFacebook />
+              </a>
+
+              <a href="#">
+                <FaTwitter />
+              </a>
+
+              <a href="#">
+                <FaInstagram />
+              </a>
+
+            </div>
           </div>
+          </div>
+
+
 
           <div className="contact__container__form--form">
 
-            <form action="index.html">
+            <form onSubmit={handleSubmit} action="index.html">
               <h3 className="contact__form--title">Nous contacter</h3>
 
               <div className="contact__form--input-container focus">
