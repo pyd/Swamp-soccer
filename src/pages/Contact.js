@@ -21,7 +21,11 @@ function Contact() {
 
   function blurFunction() {
     let parent = this.parentNode;
-    parent.classList.remove("focus");
+    // Let the "focus" class when the input is not empty even it lost focus
+    if(this.value == ""){
+      parent.classList.remove("focus");
+    }
+    
   }
 
 
@@ -105,6 +109,12 @@ function Contact() {
                 <input type="tel" name="phone" className="input"></input>
                 <label for="">Téléphone</label>
                 <span>Téléphone</span>
+              </div>
+
+              <div className="contact__form--input-container">
+                <input type="text" name="email" className="input"></input>
+                <label for="">Email</label>
+                <span>Email</span>
               </div>
 
               <div className="contact__form--input-container textarea">
