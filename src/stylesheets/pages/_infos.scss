@@ -1,11 +1,8 @@
 .infos {
-
-    background: $nagivation-mobile-bg-color;
   
     .infos--title {
       font-family: $font-title2;
       font-size: $font-size-title;
-      color: $nagivation-link-color;
       letter-spacing: .2rem;
       text-align: center;
     }
@@ -64,12 +61,10 @@
   
       .info__item__detail--hours {
         padding-left: 10%;
-        color: $nagivation-link-color;
       }
   
       .info__item__detail--rules {
         padding-right: 10%;
-        color: $nagivation-link-color;
       }
   
       .infos--icons{
