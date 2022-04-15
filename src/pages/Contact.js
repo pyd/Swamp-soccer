@@ -7,9 +7,37 @@ function Contact() {
     console.log('form submitted');
   }
 
+
+  // Add the "focus" class when the input gets focus
+  // & remove it when the input lost focus
+  const inputs = document.querySelectorAll(".input");
+
+  // When the input gets focus, we need to select it's parent,
+  // then we need to add the "focus" class to it 
+  function focusFunction() {
+    let parent = this.parentNode;
+    parent.classList.add("focus");
+  }
+
+  function blurFunction() {
+    let parent = this.parentNode;
+    parent.classList.remove("focus");
+  }
+
+
+  inputs.forEach(input => {
+    input.addEventListener("focus", focusFunction);
+    // Same thing for lost focus, we'll add a blur event listener,
+    // then we'll select it's parent, except this time, we'll remove the "focus" class
+    input.addEventListener("blur", blurFunction);
+  });
+
+
+
+
   return (
     // <main className="contact">
-      
+
     //   <h1>Contactez-nous</h1>
 
     //   <div className="container">
@@ -53,47 +81,47 @@ function Contact() {
     //     </div>
 
     //   </div>
-      
+
     // </main>
 
-  // );
-  <div className="contact">
-    <div className="contact__container">
-      <div className="contact__container__form">
-        <div className="contact__container__form--info"></div>
+    // );
+    <div className="contact">
+      <div className="contact__container">
+        <div className="contact__container__form">
+          <div className="contact__container__form--info"></div>
 
-        <div className="contact__container__form--form">
-          
-          <form action="index.html">
-            <h3 className="contact__form--title">Nous contacter</h3>
+          <div className="contact__container__form--form">
 
-            <div className="contact__form--input-container focus">
-              <input type="text" name="name" className="input"></input>
-              <label for="">Nom de l'utilisateur</label>
-              <span>Nom de l'utilisateur</span>
-            </div>
-            
-            <div className="contact__form--input-container">
-              <input type="tel" name="phone" className="input"></input>
-              <label for="">Téléphone</label>
-              <span>Téléphone</span>
-            </div>
+            <form action="index.html">
+              <h3 className="contact__form--title">Nous contacter</h3>
 
-            <div className="contact__form--input-container textarea">
-              <textarea name="message" className="input"></textarea>
-              <label className="label" for="">Message</label>
-              <span>Message</span>
-            </div>
+              <div className="contact__form--input-container focus">
+                <input type="text" name="name" className="input"></input>
+                <label for="">Nom de l'utilisateur</label>
+                <span>Nom de l'utilisateur</span>
+              </div>
 
-            <input type="submit" value="Envoyer" className="btn" />
+              <div className="contact__form--input-container">
+                <input type="tel" name="phone" className="input"></input>
+                <label for="">Téléphone</label>
+                <span>Téléphone</span>
+              </div>
 
-          </form>
+              <div className="contact__form--input-container textarea">
+                <textarea name="message" className="input"></textarea>
+                <label className="label" for="">Message</label>
+                <span>Message</span>
+              </div>
 
+              <input type="submit" value="Envoyer" className="btn" />
+
+            </form>
+
+          </div>
         </div>
       </div>
-    </div>
 
-  </div>
+    </div>
   )
 }
 
