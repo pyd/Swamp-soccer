@@ -1,128 +1,121 @@
 .statistiques {
-   padding-top: 5rem;
-   padding: 3% 10% 3% 10%;
-   color: $first-color;
-   background: $stat-bg-color;
-   font-family: $font-text;
-   position: relative;
+  padding-top: 5rem;
+  padding: 3% 10% 3% 10%;
+  color: $first-color;
+  background: $stat-bg-color;
+  font-family: $font-text;
+  position: relative;
 
-   .stats {
+  .stats {
     text-transform: uppercase;
     display: table;
     margin: 0 auto;
 
     .container {
-        border: .3rem solid $first-color;
-        display: flex;
-        border-bottom: none;
-        position: relative;
-        padding: 3rem;
+      border: 0.3rem solid $first-color;
+      display: flex;
+      border-bottom: none;
+      position: relative;
+      padding: 3rem;
 
-        &::before {
-            content: "";
-            position: absolute;
-            background-color: $first-color;
-            width: 5%;
-            height: 5%;
-            top: 98%;
-            left: 98%;
-          }        
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: $first-color;
+        width: 5%;
+        height: 5%;
+        top: 98%;
+        left: 98%;
+      }
 
-
-        &::after {
-            content: "";
-            position: absolute;
-            background-color: $first-color;
-            width: 5%;
-            height: 5%;
-            top: 98%;
-            right: 98%;
-          }
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: $first-color;
+        width: 5%;
+        height: 5%;
+        top: 98%;
+        right: 98%;
+      }
     }
 
-
     .label {
-        position: absolute;
-        top: -2rem;
-        right: 50%;
-        font-size: $font-size-subtitle;
-        text-align: center;
-        color: $stat-text-label-color;
-        background-color: $stat-label-bg-color;
-        padding: 0 1rem 0 1rem;
-        font-family: $font-title2;
+      position: absolute;
+      top: -2rem;
+      right: 50%;
+      font-size: $font-size-subtitle;
+      text-align: center;
+      color: $stat-text-label-color;
+      background-color: $stat-label-bg-color;
+      padding: 0 1rem 0 1rem;
+      font-family: $font-title2;
     }
 
     .bonus {
-        text-align: center;
-        margin: 1rem;
+      text-align: center;
+      margin: 1rem;
 
+      span {
+        color: $stat-text-number-color;
+        margin: 1rem;
+        font-size: $font-size-subtitle;
+        font-weight: 600;
+      }
+
+      p {
+        color: $stat-text-color;
+        margin-top: 0.5rem;
+        font-size: $font-size-standart;
+      }
+    }
+  }
+
+  .icon {
+    font-size: 3rem;
+    position: absolute;
+    left: 48%;
+    top: 75%;
+  }
+}
+
+@media (max-width: $medium-screen) {
+  .statistiques {
+    padding: 3rem;
+
+    .stats {
+      .container {
+        display: flex;
+        flex-direction: column;
+        border: none;
+        padding: 0;
+
+        &::before {
+          display: none;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+
+      .label {
+        position: initial;
+        font-size: $font-size-mobile-subtitle;
+        background-color: transparent;
+      }
+
+      .bonus {
         span {
-            color: $stat-text-number-color;
-            margin: 1rem;
-            font-size: $font-size-subtitle;
-            font-weight: 600;
+          margin: 0.5rem;
+          font-size: $font-size-mobile-subtitle;
         }
 
         p {
-            color: $stat-text-color;
-            margin-top: .5rem;
-            font-size: $font-size-standart;
+          color: $stat-text-color;
+          margin-top: 0.5rem;
+          font-size: $font-size-mobile-standart;
         }
+      }
     }
-
-    }   
-
-    .icon{
-        font-size: 3rem;
-        position: absolute;
-        left: 48%;
-        top: 75%;
-    }
-}
-
-@media(max-width: $medium-screen) {
-    .statistiques {
-        padding: 3rem;
-
-        .stats{
-
-
-            .container{
-                display: flex;
-                flex-direction: column;
-                border: none;
-                padding: 0;
-
-                &::before {
-                    display: none;
-                  }        
-        
-                &::after {
-                    display: none;
-                  }
-            }
-
-            .label {
-                position: initial;
-                font-size: $font-size-mobile-subtitle;
-                background-color: transparent;
-            }
-        
-            .bonus {
-        
-                span {
-                    margin: .5rem;
-                    font-size: $font-size-mobile-subtitle;
-                }
-        
-                p {
-                    color: $stat-text-color;
-                    margin-top: .5rem;
-                    font-size: $font-size-mobile-standart;
-                }
-            }
-        }
-    
-    }
+  }
 }

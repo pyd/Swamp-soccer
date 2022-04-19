@@ -1,38 +1,38 @@
-.presentation{
-    display: table;
-    margin: 0 auto;
-    padding-top: 5rem;
-    padding: 3% 10% 3% 10%;
-    color: $presentation-text-color;
-    background: $presentation-bg-color;
-    font-family: $font-text;
+.presentation {
+  display: table;
+  margin: 0 auto;
+  padding-top: 5rem;
+  padding: 3% 10% 3% 10%;
+  color: $presentation-text-color;
+  background: $presentation-bg-color;
+  font-family: $font-text;
 
-    h2{
-        font-size: $font-size-subtitle;
-        margin-bottom: 2%;
-        font-family: $font-title;
-        letter-spacing: .3rem;
-    }
+  h2 {
+    font-size: $font-size-subtitle;
+    margin-bottom: 2%;
+    font-family: $font-title;
+    letter-spacing: 0.3rem;
+  }
 
-    p{
-        font-size: $font-size-standart;
-        padding: .5rem;
-        text-align: left;
-    }
+  p {
+    font-size: $font-size-standart;
+    padding: 0.5rem;
+    text-align: left;
+  }
 
-    span{
-        color: $presentation-span-text-color;
-    }
+  span {
+    color: $presentation-span-text-color;
+  }
 }
 
-@media(max-width: $medium-screen) {
-    .presentation {
-        h2{
-            font-size: $font-size-mobile-subtitle;
-        }
-    
-        p{
-            font-size: $font-size-mobile-standart;
-        }
+@media (max-width: $medium-screen) {
+  .presentation {
+    h2 {
+      font-size: $font-size-mobile-subtitle;
     }
+
+    p {
+      font-size: $font-size-mobile-standart;
+    }
+  }
 }
