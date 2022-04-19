@@ -4,17 +4,15 @@ import { IoFootballOutline } from "react-icons/io5";
 
 const Navigation = () => {
 
-    const [toggleMenu, setToggleMenu] = useState(true);
+    // on screen > 768 px width nav is visible
+    // on a smaller screen, nav links should be hidden, only beurger icon is visible
+    const showNav = (window.innerWidth > 768) ? true : false;
+
+    const [toggleMenu, setToggleMenu] = useState(showNav);
 
     const toggleNavSmallScreen = () => {
         setToggleMenu(!toggleMenu);
     };
-
-    window.onresize = () => {
-        if (window.innerWidth > 768) {
-            setToggleMenu(true);
-        }
-    }
 
     return (
         <header className="navigation">
