@@ -25,8 +25,30 @@
       margin: 0.1rem;
     }
 
-    a {
+    .footer__container--title {
+      font-family: $font-title;
+      color: $hero-title-color;
+      text-transform: uppercase;
+      font-size: $font-size-subtitle;
+      letter-spacing: 0.3rem;
+    }
+
+    .footer__container__links {
+      font-family: $font-text;
+      font-size: $font-size-mobile-standart;
       color: $nagivation-link-color;
+      cursor: pointer;
+
+      li {
+        margin: 0.1rem;
+      }
+
+      a {
+        color: $nagivation-link-color;
+        &.active {
+          color: $nagivation-link-color-hover;
+        }
+      }
     }
   }
 
