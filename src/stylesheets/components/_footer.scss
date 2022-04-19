@@ -24,9 +24,12 @@
         li{
             margin: .1rem;
         }
-
+        
         a{
             color: $nagivation-link-color;
+            &.active {
+                color: $nagivation-link-color-hover;
+            }
         }
     }
 
