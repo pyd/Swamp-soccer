@@ -35,7 +35,7 @@ const Footer = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/About">
+                        <NavLink to="/Histoire">
                             Notre histoire
                         </NavLink>
                     </li>
