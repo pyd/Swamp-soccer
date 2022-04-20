@@ -2,13 +2,22 @@ import React from "react";
 import { GiWashingMachine } from "react-icons/gi";
 import { FaAmbulance, FaBath, FaFrog, FaCloudShowersHeavy } from "react-icons/fa";
 
+import partnerData from "../Home/Partnership/partnerData";
+import PartnerItem from "../Home/Partnership/PartnerItem";
 
 // == Component
 const Partnership = () => {
+
+    const partners = partnerData.map(item => {
+        return <PartnerItem key={item.key} icon={item.icon} partner={item.partner} />
+    })
+
     return (
         <div className="partnership">
             <h2>Ils nous font déjà confiance</h2>
             <div className="row">
+
+                {partners}
 
                 <div className="partner--col">
                     <GiWashingMachine className="icon"/>
