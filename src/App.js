@@ -11,14 +11,14 @@ import Histoire from "./pages/Histoire.js";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL + '/'}>
       <Navigation />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/infos" element={<Infos />} />
-        <Route path="/members" element={<Members />} />
-        <Route path="/Histoire" element={<Histoire />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="" element={<Home />} />
+        <Route path="infos" element={<Infos />} />
+        <Route path="membres" element={<Members />} />
+        <Route path="histoire" element={<Histoire />} />
+        <Route path="contact" element={<Contact />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -25,22 +25,22 @@ const Footer = () => {
 
                 <ul className="footer__container__links footer__container__links--navigation">
                     <li>
-                        <NavLink to="/Infos">
+                        <NavLink to="/infos">
                             Nos infos
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/Members">
+                        <NavLink to="/membres">
                             Nos membres
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/Histoire">
+                        <NavLink to="/histoire">
                             Notre histoire
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/Contact">
+                        <NavLink to="/contact">
                             Contact
                         </NavLink>
                     </li>

@@ -56,23 +56,23 @@ const Navigation = () => {
 
                     <ul className="nav__links">
                         <li>
-                            <NavLink to="/Infos">
+                            <NavLink to="/infos">
                                 Nos infos
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/Members">
+                            <NavLink to="/membres">
                                 Nos membres
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/Histoire">
+                            <NavLink to="/histoire">
                                 Notre histoire
                             </NavLink>
                         </li>
                         <li>
                             <button>
-                                <NavLink to="/Contact">
+                                <NavLink to="/contact">
                                     Contact
                                 </NavLink>
                             </button>
