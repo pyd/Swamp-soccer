@@ -1,5 +1,5 @@
-import {MemberCard} from "../components/MemberCard.js";
-import {MembersData} from "./../components/DataMembers.js";
+import {MemberCard} from "../components/Members/MemberCard.js";
+import {MembersData} from "./../components/Members/DataMembers.js";
 
 function Members() {
   // -------------------------------------------------------------

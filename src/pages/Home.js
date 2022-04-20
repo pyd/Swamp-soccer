@@ -1,7 +1,7 @@
-import Hero from "../components/Hero";
-import Presentation from "../components/Presentation";
-import Partnership from "../components/Partnership";
-import Stats from "../components/Stats";
+import Hero from "../components/Home/Hero";
+import Presentation from "../components/Home/Presentation";
+import Partnership from "../components/Home/Partnership";
+import Stats from "../components/Home/Stats";
 
 
 
