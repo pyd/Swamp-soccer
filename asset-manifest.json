@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Swamp-soccer/static/css/main.6e36a0e2.css",
+    "main.js": "/Swamp-soccer/static/js/main.36f62077.js",
+    "static/media/slick.svg": "/Swamp-soccer/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/Swamp-soccer/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/Swamp-soccer/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/Swamp-soccer/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/Swamp-soccer/index.html",
+    "main.6e36a0e2.css.map": "/Swamp-soccer/static/css/main.6e36a0e2.css.map",
+    "main.36f62077.js.map": "/Swamp-soccer/static/js/main.36f62077.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6e36a0e2.css",
+    "static/js/main.36f62077.js"
+  ]
+}
