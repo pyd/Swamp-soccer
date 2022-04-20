@@ -17,7 +17,7 @@ const Partnership = () => {
             <h2>Ils nous font déjà confiance</h2>
             <div className="row">
 
-                {partners}
+                {/* {partners} */}
 
                 <div className="partner--col">
                     <GiWashingMachine className="icon"/>
