@@ -23,7 +23,7 @@ $playercard-color-font-player-stat-value: rgb(202, 202, 202);
       font-family: $font-text;
     }
 
-      //last li for goal
+    //last li for goal
     &:nth-last-of-type(1) {
       justify-self: center;
       grid-column: 1 / 3;

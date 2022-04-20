@@ -1,62 +1,140 @@
-.general_histoire{
+.about {
+    margin: 3rem 5rem 0 5rem;
+
+    .about--title {
+        font-family: $font-title2;
+        font-size: $font-size-title;
+        text-align: center;
+        // margin-bottom: 2rem;
+    }
+
+    .about__content {
+        padding: 2rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about__content--figure {
+
+        img {
+            width: 100%;
+            border-radius: 10rem;
+
+            box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .about__content__desc {
+        margin: 1rem;
+        padding: 2rem;
+
+        .about__content__desc--title {
+            font-family: $font-title2;
+            font-size: $font-size-title;
+            margin-bottom: 2rem;
+        }
+
+
+        .about__content__desc--subtitle {
+            font-size: $font-size-subtitle;
+            // padding-bottom: 2rem;
+        }
+
+        .about__content__desc--text {
+            font-size: $font-size-standart;
+
+        }
+    }
+
+    .about__gallery {
+        margin-bottom: 2rem;
+        margin: 2rem;
+
+        .about__gallery--title {
+            font-family: $font-title2;
+            font-size: $font-size-subtitle;
+            margin-bottom: 2rem;
+        }
+
+        .about__gallery--text {
+            font-size: $font-size-standart;
+            margin-left: .5rem;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+@media (max-width: $medium-screen) {
+    .about {
+        margin: 0;
+
+        .about__content {
+            grid-template-columns: 1fr;
+            padding: 0;
+
+            .about__content--figure {
+
+                img {
+                    display: none;
+                }
+            }
+        }
+
+
+    }
+}
+
+// SLIDER scss
+
+.card-wrapper {
     position: relative;
     width: 100%;
-}
-.histoire_descript{
-    display: flex;
-    justify-content: space-around;
-}
-.histoire_titre{ 
-    font-family: $font-title2;
-    font-size: $font-size-title;
-    letter-spacing: .2rem;
-    margin: 1rem;
-  }
-.descript_titre1{
-    margin: 1rem;
-    font-size: 2rem ;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
- }
-.histoire__descript{
-    padding: 3rem;
-    font-size: 2rem;
-}
-.hitoire_img 
-{
-    padding: 1rem;
-    margin-top: 2rem;
-    
-}
-.histoire_photo{
-    display: flex;
-    margin: 1rem;
-}
-.image{
-    width: 100%;
-    height: 60%;
-    object-fit: cover;
-    border-radius: 20px;
-}
-.galerie_photo{
-    width:100%;
-    height: auto;
-    padding:10px;
-    border-radius:40px;
-    background-color: $presentation-bg-color;
-    margin: 1rem;
-    overflow:hidden;
-    -webkit-transition:all 0.2s ease-in;
-    -moz-transition:all 0.2s ease-in;
-    -ms-transition:all 0.2s ease-in;
-    -o-transition:all 0.2s ease-in;
-    transition:all 0.2s ease-in;
-    text-align: center;
-    font-size: 2rem;
-}
-.galerie_photo :hover .image{
-    width: 100%;
-    height: 100%;
-}
+    padding: 0 10px;
+    box-sizing: border-box;
+    max-width: 30rem;
 
 
+    &:active,
+    &:hover,
+    &:focus {
+        outline: none;
+        border: none;
+    }
+
+    // img{
+    //     width: 100%;
+    // }
+
+    .card {
+        width: 100%;
+        height: 20rem;
+        border-radius: .5rem;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+
+        .card-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 200;
+            background-color: black;
+            transition: 0.3s;
+            // transform: translateY(-50%);
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+                &:hover{
+                    opacity: 4;
+                    transition: .5s;
+                }
+            }
+
+        }
+    }
+}

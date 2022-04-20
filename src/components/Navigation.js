@@ -1,19 +1,45 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { IoFootballOutline } from "react-icons/io5";
+import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import { IoFootballOutline } from "react-icons/io5"
 
 const Navigation = () => {
 
-    const [toggleMenu, setToggleMenu] = useState(true);
+    const widthLimit = 768
+
+    /**
+     * check if screen width is gt 768px
+     * on screen > 768 px width nav is visible
+     * on a smaller screen, nav links should be hidden, only beurger icon is visible
+     * @returns boolean
+     */
+    const screenIsMedium = function() {
+        return window.innerWidth > widthLimit
+    }
+
+    /**
+     * handler for resize event
+     * expand/collapse nav depending on the screen width
+     */
+    const resizeHandler = function () {
+        setToggleMenu(screenIsMedium())
+    }
+
+    // local state for expanding/collapsing navigation 
+    const [toggleMenu, setToggleMenu] = useState(screenIsMedium())
+
+    // add listener for the resize event (on mount) and clean it up on unmount
+    React.useEffect(() => {
+        window.addEventListener('resize', () => {
+            window.addEventListener('resize', resizeHandler())
+        })
+        return () => {
+            window.removeEventListener('resize', resizeHandler())
+        }
+    }, [])
+
 
     const toggleNavSmallScreen = () => {
-        setToggleMenu(!toggleMenu);
-    };
-
-    window.onresize = () => {
-        if (window.innerWidth > 768) {
-            setToggleMenu(true);
-        }
+        setToggleMenu(!toggleMenu)
     }
 
     return (
