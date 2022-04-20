@@ -50,8 +50,10 @@ const About = () => {
 
                 </div>
             </div>
+
         </div>
     );
 };
+//effvfg
 
 export default About;
