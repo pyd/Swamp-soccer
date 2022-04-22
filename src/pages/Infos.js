@@ -14,7 +14,7 @@ const Infos = () => {
     return (
         <div className="infos">
 
-            <h3 className="infos--title">Infos Utiles</h3>
+            <h3 className="infos--title">Nos Infos</h3>
 
             <div className="infos__content">
 

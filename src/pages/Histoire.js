@@ -10,10 +10,6 @@ const About = () => {
 
             <div className='about__content'>
 
-                <figure className='about__content--figure'>
-                    <img src='./img/foot1.jpg' alt='foot1' />
-                </figure>
-
                 <div className='about__content__desc'>
                     <h4 className='about__content__desc--title'>Notre histoire </h4>
                     <h5 className='about__content__desc--subtitle'>Le « swamp soccer » : un sport bien boueux </h5>
