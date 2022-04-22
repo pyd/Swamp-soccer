@@ -21,7 +21,7 @@ const MembersData = [
 
     {
         id: 2,
-        name: 'Marselle',
+        name: 'Marcel',
         LastName: 'Delasalle',
         role: 'Tresorier',
         position: 'Arriere Gauche',
