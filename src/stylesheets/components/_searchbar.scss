@@ -1,0 +1,75 @@
+.form {
+    margin-block-end: 4rem;
+    display: flex;
+  
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      font-size: 1rem;
+    }
+    .inputSearch {
+      // width: min(10rem, 90%);
+      font-size: 1.2rem;
+      padding: 0.5rem;
+      border: 1px solid gray;
+      border-radius: 0.5rem;
+  
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(17, 17, 93, 0.435);
+      }
+    }
+    .form-button {
+      align-self: flex-end;
+  
+      margin-inline-start: 0.5rem;
+      width: min(5rem, 90%);
+      height: 2.7rem;
+      border-radius: 5px;
+      color: white;
+      background-color: rgb(23, 35, 139);
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 5px rgba(68, 68, 68, 0.435);
+  
+      font-size: 0.9rem;
+  
+      &:active {
+        transform: translateY(2%) scale(99.5%);
+        box-shadow: 0 2px 5px rgba(68, 68, 68, 0.435);
+      }
+    }
+  }
+  
+  .MainContainer {
+    margin-inline: auto;
+    margin-block: 4rem;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: min(60rem, 90%);
+  }
+  
+  .text-h2 {
+    font-size: 2.5rem;
+    color: rgb(104, 42, 42);
+  }
+  
+  .textExemple {
+    font-size: 1.1rem;
+  
+    &::first-letter {
+      font-size: 2rem;
+      font-weight: 900;
+      color: rgb(143, 37, 37);
+    }
+  }
+  
+  .noResult {
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+  
