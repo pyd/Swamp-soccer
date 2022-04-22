@@ -15,12 +15,12 @@
 
     .info__item {
       flex-basis: 31%;
-      background: $partnership-bg-color;
       border-radius: 1rem;
       margin-bottom: 5%;
       padding: 2rem;
       margin: 1%;
       transition: 0.5s;
+      // width: 50%;
 
       &:hover {
         box-shadow: 0 0 1.5rem 0 $partnership-box-shadow-color;

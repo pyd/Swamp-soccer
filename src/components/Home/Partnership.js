@@ -2,9 +2,9 @@ import React from "react";
 import { GiWashingMachine } from "react-icons/gi";
 import { FaAmbulance, FaBath, FaFrog, FaCloudShowersHeavy } from "react-icons/fa";
 
-
 // == Component
 const Partnership = () => {
+
     return (
         <div className="partnership">
             <h2>Ils nous font déjà confiance</h2>
