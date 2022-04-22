@@ -7,12 +7,14 @@ import Infos from "./pages/Infos.js";
 import Contact from './pages/Contact.js';
 import Footer from "./components/Footer.js";
 import Histoire from "./pages/Histoire.js";
+import Videos from './components/Videos/Videos'
 
 
 function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL + '/'}>
       <Navigation />
+      <Videos />
       <Routes>
         <Route path="" element={<Home />} />
         <Route path="infos" element={<Infos />} />

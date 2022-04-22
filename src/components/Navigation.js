@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { IoFootballOutline } from "react-icons/io5"
+import VideoPlayerToggler from './Videos/Toggler'
 
 const Navigation = () => {
 
@@ -48,6 +49,7 @@ const Navigation = () => {
                 <NavLink to="/" >
                     Foot 2 boue <IoFootballOutline className="icon" />
                 </NavLink>
+                <VideoPlayerToggler />
             </h2>
             <nav>
 
