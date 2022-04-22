@@ -3,34 +3,31 @@ import {MemberCardStat} from "./MemberCardStat";
 import {IoArrowUndoCircle} from "react-icons/io5";
 
 function MemberCard(props) {
-
-
-  const [cardRotate, setCardRotate] = React.useState(false)
+  const [cardRotate, setCardRotate] = React.useState(false);
 
   function cardButton() {
-    setCardRotate((prevCardRotate) => !prevCardRotate)
+    setCardRotate((prevCardRotate) => !prevCardRotate);
   }
   const setRotateClass = cardRotate ? "card-container js-rotation" : "card-container";
-
-
 
   function touchStartTest(eStart) {
     console.log("TouchStart");
   }
- 
+
   function touchEndTest(eEnd) {
     console.log("TouchEnd");
-
-    
   }
 
   return (
-    <section className={setRotateClass}  onClick={cardButton}  onTouchStart={touchStartTest} onTouchEnd={touchEndTest} >
-
+    <section
+      className={setRotateClass}
+      onClick={cardButton}
+      onTouchStart={touchStartTest}
+      onTouchEnd={touchEndTest}
+    >
       <article className="card__front">
+        <IoArrowUndoCircle className="card-icon icon-front" />
 
-      <IoArrowUndoCircle className="card-icon icon-front" />
-      
         <figure>
           <img className="general__img" src="./img/profilpicture.jpg" alt="" />
         </figure>
@@ -47,7 +44,6 @@ function MemberCard(props) {
       </article>
 
       <article className="card__back">
-
         <IoArrowUndoCircle className="card-icon icon-back" />
 
         <div className="card__back-name">
