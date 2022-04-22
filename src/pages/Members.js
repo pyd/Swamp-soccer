@@ -37,7 +37,7 @@ function Members() {
 
   return (
     <div className="members">
-      <h4 className="memebers-title">Nos Membres</h4>
+      <h4 className="members-title">Nos Membres</h4>
       <section className="member__position-container goal">
         <h2 className="member__categorie-h2">Gardien(s)</h2>
         <div className="member__cards-container">{goalKeeperList}</div>
