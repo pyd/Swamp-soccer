@@ -10,20 +10,21 @@ function MemberCard(props) {
   }
   const setRotateClass = cardRotate ? "card-container js-rotation" : "card-container";
 
-  function touchStartTest(eStart) {
-    console.log("TouchStart");
-  }
+  // function touchStartTest(eStart) {
+  //   console.log("TouchStart");
+  // }
 
-  function touchEndTest(eEnd) {
-    console.log("TouchEnd");
-  }
+  // function touchEndTest(eEnd) {
+  //   console.log("TouchEnd");
+  // }
 
   return (
     <section
+      id={props.cardparam.id}
       className={setRotateClass}
       onClick={cardButton}
-      onTouchStart={touchStartTest}
-      onTouchEnd={touchEndTest}
+      // onTouchStart={touchStartTest}
+      // onTouchEnd={touchEndTest}
     >
       <article className="card__front">
         <IoArrowUndoCircle className="card-icon icon-front" />

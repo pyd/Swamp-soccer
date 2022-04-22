@@ -4,7 +4,7 @@
   .infos--title {
     font-family: $font-title2;
     font-size: $font-size-title;
-    letter-spacing: .2rem;
+    letter-spacing: 0.2rem;
     text-align: center;
   }
 
@@ -28,17 +28,15 @@
 
       .info__item--desc {
         font-size: $font-size-standart;
-        margin: .1rem;
+        margin: 0.1rem;
       }
 
       .info__item--img {
         width: 100%;
-        border-radius: .5rem;
-        margin: .1rem;
+        border-radius: 0.5rem;
+        margin: 0.1rem;
       }
     }
-
-
 
     .info__item__detail {
       width: 40%;
@@ -46,17 +44,15 @@
       text-align: center;
       font-size: $font-size-standart;
 
-
       .info__item__detail--title {
         font-family: $font-title2;
         font-size: $font-size-subtitle;
-        letter-spacing: .2rem;
+        letter-spacing: 0.2rem;
         background: $nagivation-bg-btn-color;
         color: $nagivation-bg-color;
-        padding: .5rem;
-        border-radius: .5rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
         margin-bottom: 5%;
-
       }
     }
 
@@ -68,32 +64,27 @@
       padding-right: 10%;
     }
 
-    .infos--icons{
-      margin-right: .2rem;
+    .infos--icons {
+      margin-right: 0.2rem;
     }
-
   }
 }
 
-
-
-@media(max-width: $medium-screen) {
+@media (max-width: $medium-screen) {
   .infos {
-
     .infos--title {
       font-size: $font-size-mobile-title;
     }
-
 
     .infos__content {
       flex-direction: column;
 
       .info__item {
-        padding: .5rem;
+        padding: 0.5rem;
 
         .info__item--desc {
           font-size: $font-size-mobile-standart;
-          margin-bottom: .5rem;
+          margin-bottom: 0.5rem;
         }
       }
 
@@ -106,11 +97,8 @@
         .info__item__detail--title {
           font-size: $font-size-mobile-subtitle;
           margin-bottom: 1rem;
-  
         }
-
       }
-
     }
   }
 }
