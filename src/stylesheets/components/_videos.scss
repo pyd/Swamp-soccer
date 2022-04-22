@@ -1,0 +1,109 @@
+.videosComp {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    padding: 10px;
+    z-index: 999;
+    transform: translate(-105%, -50%);
+    // background-color: $secondary-color;
+    border-radius: 4px;
+    border: 1px solid $first-color;
+    transition-property: left transform;
+    transition-duration: .4s;
+
+    &.show {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .container {
+        display: flex;
+        
+        ul.playlist {
+            flex-grow: 1;
+            padding: 15px;
+            margin-left: 1px;
+            background-color: $secondary-color;
+            font-size: .8rem;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            opacity: .7;
+    
+            li.item {
+                color: white;
+                margin: 0 0 15px 0;
+                cursor: pointer;
+
+                .icon {
+                    margin-right: 10px;
+                }
+
+                span.title.active {
+                    color: orange;
+                }
+            }
+        }
+    }
+}
+
+
+
+// .videosComp {
+//     position: absolute;
+//     top: 50%;
+//     // left: -2000px;
+//     transform: translateY(-50%);
+//     transition-property: position;
+//     transition-duration: .4s;
+//     background-color: black;
+//     z-index: 999;
+//     padding: 10px;
+//     border-radius: 5px;
+//     width: 500px;
+
+//     &.show {
+//         left: calc(50%-300px);
+//         // transform: translateY(-50%) translateX(-50%);
+//     }
+    
+//     .container {
+//         display: flex;
+
+//         .playlist {
+//             flex-grow: 1;
+//             padding: 20px 10px 20px 0;
+//             background-color: black;
+//             font-size: .8rem;
+            
+//             li {
+//                 margin: 0 0 10px 0;
+//                 color: green;
+//                 cursor: pointer;
+                
+//                 .icon {
+//                     position: relative;
+//                     top: 2px;
+//                     margin-left: 10px;
+//                     margin-right: 10px;
+//                     color: $first-color;
+//                 }
+                
+//                 .title {
+//                     color: green;
+//                     // text-transform: capitalize;
+
+//                     &.active {
+//                         color: red;
+//                         font-size: 22px;
+//                     }
+//                 }
+
+//                 .title.active  {
+//                     color: green;
+//                 }
+//             }
+//         }
+//     }
+
+
+// }
