@@ -19,7 +19,7 @@
   transform-style: preserve-3d;
   perspective: 1000px;
 
-  font-size: $playercard-font-size;
+  font-size: $font-size-standart;
 }
 
 // -------------------------------------------
@@ -112,7 +112,7 @@
 
   .card__front-stats {
     @include grid-column(repeat(2, 8rem), 0.5rem, 0.5rem);
-    font-size: $playercard-font-size-stats;
+    font-size: $font-size-standart;
     font-weight: bold;
   }
 }

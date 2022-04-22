@@ -8,13 +8,13 @@ import InfoRules from '../components/Infos/InfoRules';
 const Infos = () => {
 
     const infoItemElements = infosData.map(infoItem => {
-        return <InfoItem intro={infoItem.intro} img={infoItem.img} description={infoItem.description}/>
+        return <InfoItem key={infoItem.id} {...infoItem} />
     })
-    
+
     return (
         <div className="infos">
 
-            <h3 className="infos--title">Infos Utiles</h3>
+            <h3 className="infos--title">Nos Infos</h3>
 
             <div className="infos__content">
 

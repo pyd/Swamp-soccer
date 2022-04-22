@@ -11,13 +11,23 @@ const Footer = () => {
 
                 <ul className='footer__container__links footer__container__links--icons'>
                     <li>
-                        <GrFacebook /> <span>Facebook</span>
+                        <a href="https://fr-fr.facebook.com/swampsoccerworldcup/">
+                            <GrFacebook />
+                            <span> Facebook</span>
+                        </a>
+                        
                     </li>
                     <li>
-                        <GrInstagram /> <span>Instagram</span>
+                        <a href="https://www.instagram.com/swampsoccersweden/?hl=fr">
+                            <GrInstagram />
+                            <span> Instagram</span>
+                        </a>
                     </li>
                     <li>
-                        <GrTwitter /> <span>Twitter</span>
+                        <a href="https://twitter.com/i/events/998931208980582400">
+                            <GrTwitter />
+                            <span> Twitter</span>
+                        </a>
                     </li>
                 </ul>
 

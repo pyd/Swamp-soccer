@@ -22,7 +22,7 @@ function Contact() {
   function blurFunction() {
     let parent = this.parentNode;
     // Let the "focus" class when the input is not empty even it lost focus
-    if (this.value == "") {
+    if (this.value === "") {
       parent.classList.remove("focus");
     }
 
@@ -79,15 +79,15 @@ function Contact() {
             <p>Connectez vous à nous : </p>
             <div className="social-icons">
 
-              <a href="#">
+              <a href="https://fr-fr.facebook.com/swampsoccerworldcup/">
                 <FaFacebook />
               </a>
 
-              <a href="#">
+              <a href="https://twitter.com/i/events/998931208980582400">
                 <FaTwitter />
               </a>
 
-              <a href="#">
+              <a href="https://www.instagram.com/swampsoccersweden/?hl=fr">
                 <FaInstagram />
               </a>
 
