@@ -1,5 +1,6 @@
 import {MemberCard} from "../components/Members/MemberCard.js";
 import {MembersData} from "./../components/Members/DataMembers.js";
+import Search from "../components/Members/Search";
 
 function Members() {
   // -------------------------------------------------------------
@@ -37,7 +38,9 @@ function Members() {
 
   return (
     <div className="members">
+       
       <h4 className="members-title">Nos Membres</h4>
+      <Search />
       <section className="member__position-container goal">
         <h2 className="member__categorie-h2">Gardien(s)</h2>
         <div className="member__cards-container">{goalKeeperList}</div>

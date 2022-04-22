@@ -19,13 +19,11 @@ function MemberCard(props) {
   }
  
   function touchEndTest(eEnd) {
-    console.log("TouchEnd");
-
-    
+    console.log("TouchEnd");  
   }
 
   return (
-    <section className={setRotateClass}  onClick={cardButton}  onTouchStart={touchStartTest} onTouchEnd={touchEndTest} >
+    <section id={props.cardparam.id} className={setRotateClass}  onClick={cardButton}  onTouchStart={touchStartTest} onTouchEnd={touchEndTest} >
 
       <article className="card__front">
 
