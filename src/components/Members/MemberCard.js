@@ -30,7 +30,7 @@ function MemberCard(props) {
         <IoArrowUndoCircle className="card-icon icon-front" />
 
         <figure>
-          <img className="general__img" src="./img/profilpicture.jpg" alt="" />
+          <img className="general__img" src={props.cardparam.img} alt="" />
         </figure>
         <article className="card__front-text">
           <h2 className="card__front-position">{props.cardparam.position}</h2>
@@ -69,4 +69,8 @@ function MemberCard(props) {
   );
 }
 
-export {MemberCard};
+function NoResult() {
+  return <p className="noResult">Aucun résultat...</p>;
+}
+
+export {MemberCard, NoResult};

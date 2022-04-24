@@ -1,21 +1,32 @@
 $after-left-pos-pourcentage: 40%;
 
 .members {
-  margin: 1rem 5rem 0 5rem;
+  margin-block-start: 2rem;
+  min-height: 95vh;
 
   .members-title {
     font-family: $font-title2;
     font-size: $font-size-title;
-    letter-spacing: .2rem;
-    margin-bottom: 2rem;
+    letter-spacing: 0.2rem;
+    margin-block-end: 2rem;
   }
 }
 
+@media (max-width: $medium-screen) {
+  .members {
+    .members-title {
+      font-size: $font-size-mobile-title;
+    }
+  }
+}
+// --------------------------------------------
+// --------------------------------------------
+
 .member__position-container {
   margin-inline: auto;
-  margin-block: 6rem;
+  margin-block: 4rem;
   padding-block: 2rem;
-  max-width: 95%;
+  max-width: 90%;
 
   @include flex-modulable(column, null, center, 3rem);
 
@@ -29,9 +40,12 @@ $after-left-pos-pourcentage: 40%;
     max-width: 75%;
   }
 }
+// --------------------------------------------
 
-
-.goal, .attack, .defense{
+.goal,
+.attack,
+.defense,
+.result {
   border-radius: 5rem;
 }
 
@@ -40,12 +54,36 @@ $after-left-pos-pourcentage: 40%;
 }
 
 .attack {
-   background-color: #d77a00;
+  background-color: #d77a00;
 }
 
 .defense {
   background-color: rgb(68, 67, 67);
 }
+
+.result {
+  background-color: rgb(85, 103, 137);
+}
+
+.section-side-by-side {
+  display: grid;
+  grid-auto-rows: 1fr;
+
+  > * {
+    grid-row: 1 /2;
+    grid-column: 1 / 2;
+  }
+
+  .goal,
+  .result {
+    width: 95%;
+    height: fit-content;
+    margin-block-end: 0rem;
+  }
+}
+
+// --------------------------------------------
+// --------------------------------------------
 
 .member__cards-container {
   @include flex-modulable(column, null, center, 4rem);
@@ -60,6 +98,9 @@ $after-left-pos-pourcentage: 40%;
     flex-wrap: wrap;
   }
 }
+
+// --------------------------------------------
+// --------------------------------------------
 
 .member__categorie-h2 {
   isolation: isolate;
@@ -88,13 +129,38 @@ $after-left-pos-pourcentage: 40%;
   }
 }
 
+// --------------------------------------------
+// --------------------------------------------
+// JS CLASS
 
-@media(max-width: $medium-screen) {
-  .members {
-    margin: 2rem 2rem 2rem 2rem;
+$opacity-time: 0.15s;
+$transform-time: 0.25s;
 
-    .members-title {
-      font-size: $font-size-mobile-title;
-    }
-  }
+.hide-anime-default-js {
+  transform: translateX(-60%);
+  opacity: 0;
+  transition: transform $transform-time, opacity $opacity-time;
+}
+.show-anime-default-js {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform $transform-time, opacity $opacity-time;
+}
+
+.display-none-js {
+  display: none;
+}
+.display-auto {
+  display: auto;
+}
+
+.hide-result-anim-js {
+  transform: translateX(40%);
+  opacity: 0;
+  transition: transform $transform-time, opacity $opacity-time;
+}
+.show-result-anim-default-js {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform $transform-time, opacity $opacity-time;
 }
