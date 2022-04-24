@@ -105,6 +105,8 @@ function Members() {
   const [searchState, setSearchState] = React.useState({searchName: ""});
   const [formBtnState, setFormBtnState] = React.useState([]);
 
+  console.log(searchState.searchName);
+
   // FORM INPUT________________________________________
   function handleInputChange(event) {
     const {name, value} = event.target;
@@ -126,7 +128,7 @@ function Members() {
     );
 
     setFormBtnState(() => {
-      if (!searchState.searchName || filteredData.length === 6) {
+      if (!searchState.searchName || filteredData.length === MembersData.length) {
         // need to be set first otherwise doesnt work !??
         setDefaultScreen();
         return [];
@@ -140,6 +142,9 @@ function Members() {
         return arrayMapOn(MemberCard, filteredData);
       }
     });
+
+    console.log(filteredData.length === 6);
+    console.log(filteredData.length);
   }
 
   //____________________________________________________________________

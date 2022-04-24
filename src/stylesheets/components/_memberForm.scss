@@ -59,22 +59,10 @@
   }
 }
 
-.text-h2 {
-  font-size: 2.5rem;
-  color: rgb(104, 42, 42);
-}
-
-.textExemple {
-  font-size: 1.1rem;
-
-  &::first-letter {
-    font-size: 2rem;
-    font-weight: 900;
-    color: rgb(143, 37, 37);
-  }
-}
-
 .noResult {
-  font-size: 2.2rem;
+  align-self: center;
+  font-family: $font-title2;
+  color: whitesmoke;
+  font-size: 3rem;
   font-weight: bold;
 }
