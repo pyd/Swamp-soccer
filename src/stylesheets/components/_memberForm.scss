@@ -1,0 +1,68 @@
+.mainContainer {
+  margin-inline: auto;
+  margin-block-start: 5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: min(70rem, 90%);
+}
+
+.form-member {
+  margin-block-end: 4rem;
+  display: flex;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  label {
+    background-color: white;
+    padding-inline: 0.5rem;
+    position: absolute;
+    font-size: 0.9rem;
+    top: -23%;
+    left: 4%;
+  }
+  .inputSearch {
+    // width: min(10rem, 90%);
+    font-size: 0.9rem;
+    padding: 0.9rem;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(50, 50, 51, 0.764);
+    }
+  }
+  .form-button {
+    align-self: center;
+
+    margin-inline-start: 0.5rem;
+    width: min(5rem, 90%);
+    height: 2.8rem;
+    border-radius: 5px;
+    color: white;
+    background-color: $presentation-bg-color;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 5px rgba(68, 68, 68, 0.435);
+
+    font-size: 0.9rem;
+
+    &:active {
+      transform: translateY(2%) scale(99.5%);
+      box-shadow: 0 2px 5px rgba(68, 68, 68, 0.435);
+    }
+  }
+}
+
+.noResult {
+  align-self: center;
+  font-family: $font-title2;
+  color: whitesmoke;
+  font-size: 3rem;
+  font-weight: bold;
+}

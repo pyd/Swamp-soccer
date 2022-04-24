@@ -1,4 +1,3 @@
-
 // TEMP PARAMETER
 .card-container {
   position: absolute;
@@ -46,6 +45,19 @@
   }
   //________
   figure {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0), 70%, rgba(0, 0, 0, 0.914));
+      border-radius: $playercard-border-radius;
+    }
+
     img {
       aspect-ratio: $playercard-aspect-ratio;
       border-radius: $playercard-border-radius;
@@ -125,7 +137,7 @@
 
   .card__back-name {
     margin-inline-start: $playercard-back-margin-general;
-    margin-block-start: 1rem;
+    margin-block-start: 2rem;
     h3 {
       font-size: calc($playercard-font-size * 1.8);
       font-family: $font-title2;
@@ -142,7 +154,7 @@
         width: 20%;
         height: $playercard-back-line-width;
         background-color: white;
-        bottom: -0.5rem;
+        bottom: -1rem;
         left: -35px;
       }
       &:before {
@@ -151,14 +163,14 @@
         width: $playercard-back-line-width;
         height: $playercard-back-line-height;
         background-color: white;
-        bottom: -5.5rem;
+        bottom: -6rem;
         left: -35px;
       }
     }
   }
 
   .card__back-infolist {
-    margin-block-start: calc($playercard-back-margin-general / 3);
+    margin-block-start: calc($playercard-back-margin-general / 2);
     font-family: $font-text;
 
     .card__back-infolist-flex {
@@ -226,7 +238,6 @@
 // ROTATION
 // -------------------------------------------
 
-
 .js-rotation {
   .card__front {
     transform: rotateY(-180deg);
@@ -251,8 +262,6 @@
 // -------------------------------------------
 // STICKER
 // -------------------------------------------
-
-
 
 .card-icon {
   position: absolute;

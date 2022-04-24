@@ -3,34 +3,34 @@ import {MemberCardStat} from "./MemberCardStat";
 import {IoArrowUndoCircle} from "react-icons/io5";
 
 function MemberCard(props) {
-
-
-  const [cardRotate, setCardRotate] = React.useState(false)
+  const [cardRotate, setCardRotate] = React.useState(false);
 
   function cardButton() {
-    setCardRotate((prevCardRotate) => !prevCardRotate)
+    setCardRotate((prevCardRotate) => !prevCardRotate);
   }
   const setRotateClass = cardRotate ? "card-container js-rotation" : "card-container";
 
+  // function touchStartTest(eStart) {
+  //   console.log("TouchStart");
+  // }
 
-
-  function touchStartTest(eStart) {
-    console.log("TouchStart");
-  }
- 
-  function touchEndTest(eEnd) {
-    console.log("TouchEnd");  
-  }
+  // function touchEndTest(eEnd) {
+  //   console.log("TouchEnd");
+  // }
 
   return (
-    <section id={props.cardparam.id} className={setRotateClass}  onClick={cardButton}  onTouchStart={touchStartTest} onTouchEnd={touchEndTest} >
-
+    <section
+      id={props.cardparam.id}
+      className={setRotateClass}
+      onClick={cardButton}
+      // onTouchStart={touchStartTest}
+      // onTouchEnd={touchEndTest}
+    >
       <article className="card__front">
+        <IoArrowUndoCircle className="card-icon icon-front" />
 
-      <IoArrowUndoCircle className="card-icon icon-front" />
-      
         <figure>
-          <img className="general__img" src="./img/profilpicture.jpg" alt="" />
+          <img className="general__img" src={props.cardparam.img} alt="" />
         </figure>
         <article className="card__front-text">
           <h2 className="card__front-position">{props.cardparam.position}</h2>
@@ -45,7 +45,6 @@ function MemberCard(props) {
       </article>
 
       <article className="card__back">
-
         <IoArrowUndoCircle className="card-icon icon-back" />
 
         <div className="card__back-name">
@@ -70,4 +69,8 @@ function MemberCard(props) {
   );
 }
 
-export {MemberCard};
+function NoResult() {
+  return <p className="noResult">Aucun résultat...</p>;
+}
+
+export {MemberCard, NoResult};
