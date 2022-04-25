@@ -105,8 +105,6 @@ function Members() {
   const [searchState, setSearchState] = React.useState({searchName: ""});
   const [formBtnState, setFormBtnState] = React.useState([]);
 
-  console.log(searchState.searchName);
-
   // FORM INPUT________________________________________
   function handleInputChange(event) {
     const {name, value} = event.target;
@@ -116,6 +114,7 @@ function Members() {
   }
 
   // FORM BUTTON________________________________________
+
   function memberFormBtn(event) {
     event.preventDefault();
 
@@ -142,9 +141,6 @@ function Members() {
         return arrayMapOn(MemberCard, filteredData);
       }
     });
-
-    console.log(filteredData.length === 6);
-    console.log(filteredData.length);
   }
 
   //____________________________________________________________________
